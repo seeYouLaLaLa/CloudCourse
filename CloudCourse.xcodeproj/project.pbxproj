@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7E0B45C20AC1F55000272C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B44E20AC1F55000272C2 /* Assets.xcassets */; };
-		B7E0B45D20AC1F55000272C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B45020AC1F55000272C2 /* AppDelegate.swift */; };
-		B7E0B45E20AC1F55000272C2 /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B45220AC1F55000272C2 /* main-vc-setting.json */; };
-		B7E0B45F20AC1F55000272C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B45320AC1F55000272C2 /* LaunchScreen.storyboard */; };
-		B7E0B46020AC1F55000272C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B45520AC1F55000272C2 /* Info.plist */; };
-		B7E0B46120AC1F55000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B45720AC1F55000272C2 /* MainViewController.swift */; };
-		B7E0B46220AC1F55000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B45820AC1F55000272C2 /* NavigationController.swift */; };
-		B7E0B46320AC1F55000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B45A20AC1F55000272C2 /* HomeViewController.swift */; };
-		B7E0B46420AC1F55000272C2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B45B20AC1F55000272C2 /* MineViewController.swift */; };
+		B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */; };
+		B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */; };
+		B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */; };
+		B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */; };
+		B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */; };
+		B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */; };
+		B7E0B47B20AC2F9A000272C2 /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */; };
+		B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */; };
+		B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47420AC2F9A000272C2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190CB44D20A97DBD0054DCFB /* CloudCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E0B44E20AC1F55000272C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7E0B45020AC1F55000272C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E0B45220AC1F55000272C2 /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
-		B7E0B45420AC1F55000272C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B7E0B45520AC1F55000272C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E0B45720AC1F55000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B7E0B45820AC1F55000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		B7E0B45A20AC1F55000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B7E0B45B20AC1F55000272C2 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
+		B7E0B47320AC2F9A000272C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7E0B47420AC2F9A000272C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 		190CB44420A97DBD0054DCFB = {
 			isa = PBXGroup;
 			children = (
-				B7E0B44D20AC1F55000272C2 /* Classes */,
+				B7E0B46520AC2F9A000272C2 /* CloudCourse */,
 				190CB44E20A97DBD0054DCFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,52 +58,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B7E0B44D20AC1F55000272C2 /* Classes */ = {
+		B7E0B46520AC2F9A000272C2 /* CloudCourse */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B45620AC1F55000272C2 /* Main */,
-				B7E0B45920AC1F55000272C2 /* Controllers */,
-				B7E0B44F20AC1F55000272C2 /* Others */,
-				B7E0B45120AC1F55000272C2 /* Supporting Files */,
-				B7E0B44E20AC1F55000272C2 /* Assets.xcassets */,
+				B7E0B46620AC2F9A000272C2 /* Classes */,
+				B7E0B47020AC2F9A000272C2 /* Supporting Files */,
+				B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */,
+			);
+			path = CloudCourse;
+			sourceTree = "<group>";
+		};
+		B7E0B46620AC2F9A000272C2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B7E0B46920AC2F9A000272C2 /* Main */,
+				B7E0B46C20AC2F9A000272C2 /* Controllers */,
+				B7E0B46720AC2F9A000272C2 /* Others */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B7E0B44F20AC1F55000272C2 /* Others */ = {
+		B7E0B46720AC2F9A000272C2 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B45020AC1F55000272C2 /* AppDelegate.swift */,
+				B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
 		};
-		B7E0B45120AC1F55000272C2 /* Supporting Files */ = {
+		B7E0B46920AC2F9A000272C2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B45220AC1F55000272C2 /* main-vc-setting.json */,
-				B7E0B45320AC1F55000272C2 /* LaunchScreen.storyboard */,
-				B7E0B45520AC1F55000272C2 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B7E0B45620AC1F55000272C2 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				B7E0B45720AC1F55000272C2 /* MainViewController.swift */,
-				B7E0B45820AC1F55000272C2 /* NavigationController.swift */,
+				B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */,
+				B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		B7E0B45920AC1F55000272C2 /* Controllers */ = {
+		B7E0B46C20AC2F9A000272C2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B45A20AC1F55000272C2 /* HomeViewController.swift */,
-				B7E0B45B20AC1F55000272C2 /* MineViewController.swift */,
+				B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */,
+				B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B7E0B47020AC2F9A000272C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */,
+				B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */,
+				B7E0B47420AC2F9A000272C2 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E0B46020AC1F55000272C2 /* Info.plist in Resources */,
-				B7E0B45F20AC1F55000272C2 /* LaunchScreen.storyboard in Resources */,
-				B7E0B45E20AC1F55000272C2 /* main-vc-setting.json in Resources */,
-				B7E0B45C20AC1F55000272C2 /* Assets.xcassets in Resources */,
+				B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */,
+				B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */,
+				B7E0B47B20AC2F9A000272C2 /* main-vc-setting.json in Resources */,
+				B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,21 +186,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E0B45D20AC1F55000272C2 /* AppDelegate.swift in Sources */,
-				B7E0B46220AC1F55000272C2 /* NavigationController.swift in Sources */,
-				B7E0B46120AC1F55000272C2 /* MainViewController.swift in Sources */,
-				B7E0B46320AC1F55000272C2 /* HomeViewController.swift in Sources */,
-				B7E0B46420AC1F55000272C2 /* MineViewController.swift in Sources */,
+				B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */,
+				B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */,
+				B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */,
+				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
+				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7E0B45320AC1F55000272C2 /* LaunchScreen.storyboard */ = {
+		B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7E0B45420AC1F55000272C2 /* Base */,
+				B7E0B47320AC2F9A000272C2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -305,6 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -320,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZCA99V8R2;
-				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZCA99V8R2;
-				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
