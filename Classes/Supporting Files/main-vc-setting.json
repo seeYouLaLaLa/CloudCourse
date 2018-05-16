@@ -1,0 +1,12 @@
+[
+    {
+        "vc":"HomeViewController",
+        "title":"CloudCourse",
+        "icon":"ic_home_icon"
+    },
+    {
+        "vc":"MineViewController",
+        "title":"Mine",
+        "icon":"ic_mine_icon"
+    }
+]
