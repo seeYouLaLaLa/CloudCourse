@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */; };
+		B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */; };
+		B7C5C6C820AD204D00A40BEC /* HorizontalWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */; };
 		B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */; };
 		B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */; };
 		B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */; };
 		B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */; };
 		B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */; };
 		B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */; };
-		B7E0B47B20AC2F9A000272C2 /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */; };
 		B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */; };
 		B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47420AC2F9A000272C2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190CB44D20A97DBD0054DCFB /* CloudCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
+		B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalWaterFlowLayout.swift; sourceTree = "<group>"; };
 		B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
 		B7E0B47320AC2F9A000272C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E0B47420AC2F9A000272C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +62,44 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B7C5C6BD20AC9EE200A40BEC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6C320AD1F9D00A40BEC /* CustomCls */,
+				B7C5C6C420AD1F9D00A40BEC /* ExtensionCls */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B7C5C6C020ACAB2C00A40BEC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B7C5C6C320AD1F9D00A40BEC /* CustomCls */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */,
+			);
+			path = CustomCls;
+			sourceTree = "<group>";
+		};
+		B7C5C6C420AD1F9D00A40BEC /* ExtensionCls */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */,
+			);
+			path = ExtensionCls;
+			sourceTree = "<group>";
+		};
 		B7E0B46520AC2F9A000272C2 /* CloudCourse */ = {
 			isa = PBXGroup;
 			children = (
 				B7E0B46620AC2F9A000272C2 /* Classes */,
+				B7C5C6C020ACAB2C00A40BEC /* Resource */,
 				B7E0B47020AC2F9A000272C2 /* Supporting Files */,
 				B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */,
 			);
@@ -73,6 +111,7 @@
 			children = (
 				B7E0B46920AC2F9A000272C2 /* Main */,
 				B7E0B46C20AC2F9A000272C2 /* Controllers */,
+				B7C5C6BD20AC9EE200A40BEC /* Utils */,
 				B7E0B46720AC2F9A000272C2 /* Others */,
 			);
 			path = Classes;
@@ -107,7 +146,6 @@
 		B7E0B47020AC2F9A000272C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B47120AC2F9A000272C2 /* main-vc-setting.json */,
 				B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */,
 				B7E0B47420AC2F9A000272C2 /* Info.plist */,
 			);
@@ -142,7 +180,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = WM;
+				ORGANIZATIONNAME = CloudCourse;
 				TargetAttributes = {
 					190CB44C20A97DBD0054DCFB = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -174,7 +212,7 @@
 			files = (
 				B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */,
 				B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */,
-				B7E0B47B20AC2F9A000272C2 /* main-vc-setting.json in Resources */,
+				B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */,
 				B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,10 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */,
+				B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */,
 				B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */,
 				B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
 				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
+				B7C5C6C820AD204D00A40BEC /* HorizontalWaterFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

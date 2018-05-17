@@ -3,7 +3,7 @@
 //  CloudCourse
 //
 //  Created by FSAnonymous on 16/5/18.
-//  Copyright © 2018年 CC. All rights reserved.
+//  Copyright © 2018年 CloudCourse. All rights reserved.
 //
 
 import UIKit

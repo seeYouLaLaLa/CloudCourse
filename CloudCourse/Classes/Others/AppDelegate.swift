@@ -3,7 +3,7 @@
 //  CloudCourse
 //
 //  Created by Sper on 2018/5/14.
-//  Copyright © 2018年 CC. All rights reserved.
+//  Copyright © 2018年 CloudCourse. All rights reserved.
 //
 
 import UIKit

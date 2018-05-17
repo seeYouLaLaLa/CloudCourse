@@ -3,10 +3,13 @@
 //  CloudCourse
 //
 //  Created by FSAnonymous on 15/5/18.
-//  Copyright © 2018年 CC. All rights reserved.
+//  Copyright © 2018年 CloudCourse. All rights reserved.
 //
 
 import UIKit
+enum Suit: Character {
+    case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
+}
 
 class MineViewController: UIViewController {
 
