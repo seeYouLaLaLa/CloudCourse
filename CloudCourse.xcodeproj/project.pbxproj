@@ -10,6 +10,7 @@
 		B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */; };
 		B7B5390E20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */; };
 		B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390F20AE7C6800F60527 /* AppDelegate.swift */; };
+		B7B5391320AE7E2700F60527 /* X.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5391220AE7E2700F60527 /* X.swift */; };
 		B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */; };
 		B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */; };
 		B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CA20AD23B000A40BEC /* Item.swift */; };
@@ -28,6 +29,7 @@
 		B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalWaterFlowLayout.swift; sourceTree = "<group>"; };
 		B7B5390F20AE7C6800F60527 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7B5391220AE7E2700F60527 /* X.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X.swift; sourceTree = "<group>"; };
 		B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
 		B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		B7C5C6CA20AD23B000A40BEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = CustomCls;
 			sourceTree = "<group>";
 		};
+		B7B5391120AE7D4400F60527 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B7B5391220AE7E2700F60527 /* X.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		B7C5C6BD20AC9EE200A40BEC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 				B7C5C6C920AD237E00A40BEC /* Models */,
 				B7E0B46920AC2F9A000272C2 /* Main */,
 				B7C5C6BD20AC9EE200A40BEC /* Utils */,
+				B7B5391120AE7D4400F60527 /* Libs */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 				B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */,
 				B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */,
 				B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */,
+				B7B5391320AE7E2700F60527 /* X.swift in Sources */,
 				B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */,
 				B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
