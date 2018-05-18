@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */; };
+		B7B5390E20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */; };
+		B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390F20AE7C6800F60527 /* AppDelegate.swift */; };
 		B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */ = {isa = PBXBuildFile; fileRef = B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */; };
 		B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */; };
-		B7C5C6C820AD204D00A40BEC /* HorizontalWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */; };
-		B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */; };
+		B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CA20AD23B000A40BEC /* Item.swift */; };
+		B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */; };
 		B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */; };
 		B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */; };
 		B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */; };
@@ -22,10 +25,13 @@
 
 /* Begin PBXFileReference section */
 		190CB44D20A97DBD0054DCFB /* CloudCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalWaterFlowLayout.swift; sourceTree = "<group>"; };
+		B7B5390F20AE7C6800F60527 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "main-vc-setting.json"; sourceTree = "<group>"; };
 		B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
-		B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalWaterFlowLayout.swift; sourceTree = "<group>"; };
-		B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7C5C6CA20AD23B000A40BEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +68,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B7B538FE20AE78D000F60527 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7B5390820AE7BE400F60527 /* ControllerCls */,
+				B7B5390B20AE7BE400F60527 /* CustomCls */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7B5390820AE7BE400F60527 /* ControllerCls */ = {
+			isa = PBXGroup;
+			children = (
+				B7B5390920AE7BE400F60527 /* Home */,
+			);
+			path = ControllerCls;
+			sourceTree = "<group>";
+		};
+		B7B5390920AE7BE400F60527 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B7B5390B20AE7BE400F60527 /* CustomCls */ = {
+			isa = PBXGroup;
+			children = (
+				B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */,
+			);
+			path = CustomCls;
+			sourceTree = "<group>";
+		};
 		B7C5C6BD20AC9EE200A40BEC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B7C5C6C320AD1F9D00A40BEC /* CustomCls */,
 				B7C5C6C420AD1F9D00A40BEC /* ExtensionCls */,
 			);
 			path = Utils;
@@ -79,20 +117,21 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		B7C5C6C320AD1F9D00A40BEC /* CustomCls */ = {
-			isa = PBXGroup;
-			children = (
-				B7C5C6C720AD204D00A40BEC /* HorizontalWaterFlowLayout.swift */,
-			);
-			path = CustomCls;
-			sourceTree = "<group>";
-		};
 		B7C5C6C420AD1F9D00A40BEC /* ExtensionCls */ = {
 			isa = PBXGroup;
 			children = (
 				B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */,
+				B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */,
 			);
 			path = ExtensionCls;
+			sourceTree = "<group>";
+		};
+		B7C5C6C920AD237E00A40BEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7C5C6CA20AD23B000A40BEC /* Item.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B7E0B46520AC2F9A000272C2 /* CloudCourse */ = {
@@ -109,20 +148,13 @@
 		B7E0B46620AC2F9A000272C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B7E0B46920AC2F9A000272C2 /* Main */,
 				B7E0B46C20AC2F9A000272C2 /* Controllers */,
+				B7B538FE20AE78D000F60527 /* Views */,
+				B7C5C6C920AD237E00A40BEC /* Models */,
+				B7E0B46920AC2F9A000272C2 /* Main */,
 				B7C5C6BD20AC9EE200A40BEC /* Utils */,
-				B7E0B46720AC2F9A000272C2 /* Others */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		B7E0B46720AC2F9A000272C2 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				B7E0B46820AC2F9A000272C2 /* AppDelegate.swift */,
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 		B7E0B46920AC2F9A000272C2 /* Main */ = {
@@ -146,6 +178,7 @@
 		B7E0B47020AC2F9A000272C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7B5390F20AE7C6800F60527 /* AppDelegate.swift */,
 				B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */,
 				B7E0B47420AC2F9A000272C2 /* Info.plist */,
 			);
@@ -224,13 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E0B47520AC2F9A000272C2 /* AppDelegate.swift in Sources */,
+				B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */,
 				B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */,
 				B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */,
 				B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */,
+				B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */,
+				B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
+				B7B5390E20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift in Sources */,
 				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
-				B7C5C6C820AD204D00A40BEC /* HorizontalWaterFlowLayout.swift in Sources */,
+				B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

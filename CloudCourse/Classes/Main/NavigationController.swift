@@ -12,7 +12,7 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black, NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 16)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.black, .font : UIFont.boldSystemFont(ofSize: 16)]
         UINavigationBar.appearance().backgroundColor = UIColor.white
         UINavigationBar.appearance().tintColor = UIColor.red
         UINavigationBar.appearance().shadowImage = UIImage()
