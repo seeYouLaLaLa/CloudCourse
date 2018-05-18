@@ -22,10 +22,12 @@
 		B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */; };
 		B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */; };
 		B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47420AC2F9A000272C2 /* Info.plist */; };
+		EB3014A5B0047507B6300199 /* Pods_CloudCourse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0DC68D5EE38ACB0F2A65BF /* Pods_CloudCourse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190CB44D20A97DBD0054DCFB /* CloudCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		718E03EB7D30DE4E4293F8BB /* Pods-CloudCourse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudCourse.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse.release.xcconfig"; sourceTree = "<group>"; };
 		B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		B7B5390C20AE7BE400F60527 /* HorizontalWaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalWaterFlowLayout.swift; sourceTree = "<group>"; };
 		B7B5390F20AE7C6800F60527 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7E0B47320AC2F9A000272C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E0B47420AC2F9A000272C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC0DC68D5EE38ACB0F2A65BF /* Pods_CloudCourse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudCourse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85D4BFF1E150351214DD010 /* Pods-CloudCourse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudCourse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3014A5B0047507B6300199 /* Pods_CloudCourse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,8 @@
 			children = (
 				B7E0B46520AC2F9A000272C2 /* CloudCourse */,
 				190CB44E20A97DBD0054DCFB /* Products */,
+				91564B120571D442F26CF611 /* Pods */,
+				69BE5FDEFA349022E8F55A2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,23 @@
 				190CB44D20A97DBD0054DCFB /* CloudCourse.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		69BE5FDEFA349022E8F55A2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC0DC68D5EE38ACB0F2A65BF /* Pods_CloudCourse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91564B120571D442F26CF611 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E85D4BFF1E150351214DD010 /* Pods-CloudCourse.debug.xcconfig */,
+				718E03EB7D30DE4E4293F8BB /* Pods-CloudCourse.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B7B538FE20AE78D000F60527 /* Views */ = {
@@ -203,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 190CB45F20A97DBE0054DCFB /* Build configuration list for PBXNativeTarget "CloudCourse" */;
 			buildPhases = (
+				2D62EC75B104A6D03C2C9A51 /* [CP] Check Pods Manifest.lock */,
 				190CB44920A97DBD0054DCFB /* Sources */,
 				190CB44A20A97DBD0054DCFB /* Frameworks */,
 				190CB44B20A97DBD0054DCFB /* Resources */,
+				D2FC213C408E21E0D882879E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +288,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D62EC75B104A6D03C2C9A51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloudCourse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2FC213C408E21E0D882879E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		190CB44920A97DBD0054DCFB /* Sources */ = {
@@ -414,6 +479,7 @@
 		};
 		190CB46020A97DBE0054DCFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E85D4BFF1E150351214DD010 /* Pods-CloudCourse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -433,6 +499,7 @@
 		};
 		190CB46120A97DBE0054DCFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718E03EB7D30DE4E4293F8BB /* Pods-CloudCourse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
