@@ -12,6 +12,8 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.layerTopShadow()
+        
         UITabBar.appearance().backgroundColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.main()
         UITabBar.appearance().shadowImage = UIImage()
@@ -26,9 +28,7 @@ class MainViewController: UITabBarController {
         }
         for item in jsonResult {
             let dict = item as! Dictionary<String,String>
-            let vcName:String! = dict["vc"];
-            let title:String! = dict["title"];
-            let icon:String! = dict["icon"];
+            let vcName: String! = dict["vc"];
             guard let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] else {
                 print("namespace not be found")
                 return
@@ -38,15 +38,20 @@ class MainViewController: UITabBarController {
                 print("convert to UIViewController type failure")
                 return
             }
-            self.addChildViewController(viewController: clsType.init(), title: title, icon: icon)
+            self.addChildViewController(viewController: clsType.init(), title: dict["title"]!, icon: dict["icon"]!)
         }
     }
     
-    func  addChildViewController(viewController:UIViewController ,title:String,icon:String) -> Void {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let index = self.tabBar.items!.index(of: item)!
+        CAAnimation.tabBarClickAnimation(at: index, tabBar: self.tabBar)
+    }
+    
+    func addChildViewController(viewController: UIViewController, title: String, icon: String) {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = UIImage(named: icon)
         viewController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0,vertical: -2)
-        let nav = NavigationController.init(rootViewController:viewController)
+        let nav = NavigationController.init(rootViewController: viewController)
         self.addChildViewController(nav);
     }
 

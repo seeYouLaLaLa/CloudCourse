@@ -11,7 +11,19 @@ extension UIColor {
     static let CGFloat255 = CGFloat(255)
     
     open class func main() -> UIColor {
-        return rgb(red: 53, green: 180, blue: 60)
+        return rgb(red: 50, green: 180, blue: 60)
+    }
+    
+    open class func kGreen() -> UIColor {
+        return rgb(red: 50, green: 180, blue: 60)
+    }
+    
+    open class func kBlack() -> UIColor {
+        return rgb(red: 51, green: 51, blue: 51)
+    }
+    
+    open class func kGray() -> UIColor {
+        return rgb(red: 160, green: 160, blue: 160)
     }
     
     open class func rgb(red:Int,green:Int,blue:Int) -> UIColor {

@@ -10,15 +10,21 @@ import UIKit
 
 extension String {
     
-    func textHeight(font:UIFont,maxWidth:CGFloat) -> CGFloat {
-       return ceil(textSize(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).height)
+    func width(font:UIFont) -> CGFloat {
+        return width(font: font, maxWidth: CGFloat(MAXFLOAT))
     }
     
-    func textWidth(font:UIFont) -> CGFloat {
-        return ceil(textSize(font: font, maxWidth: CGFloat(MAXFLOAT), maxHeight: CGFloat(MAXFLOAT)).width)
+    func width(font:UIFont, maxWidth:CGFloat) -> CGFloat {
+        return size(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).width
     }
     
-    func textSize(font:UIFont, maxWidth:CGFloat, maxHeight:CGFloat) -> CGSize {
-        return self.boundingRect(with: CGSize(width: maxWidth, height: maxHeight), options: .usesLineFragmentOrigin, attributes: [.font:font], context: nil).size
+    func height(font:UIFont,maxWidth:CGFloat) -> CGFloat {
+        return size(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).height
+    }
+    
+    func size(font:UIFont, maxWidth:CGFloat, maxHeight:CGFloat) -> CGSize {
+        let size = self.boundingRect(with: CGSize(width: maxWidth, height: maxHeight), options: .usesLineFragmentOrigin, attributes: [.font:font], context: nil).size
+        return CGSize(width: ceil(size.width), height: ceil(size.height))
+        
     }
 }

@@ -7,26 +7,32 @@
 //
 
 import UIKit
-
+struct ItemInfo {
+   static let sectionInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8)
+   static let maxWidth = UIScreen.main.bounds.width - sectionInset.left - sectionInset.right - 16
+}
 class Item : NSObject {
     
-    var title:String?
+    var title: String?
     
-    var width:CGFloat = 0.0
+    var width: CGFloat = 0.0
     
-    var itemWidth:CGFloat {
+    var textSize: CGSize = CGSize.zero
+    
+    var itemSize: CGSize {
         get {
-            if width > 0.0 {
-                return width
+            if textSize.width > 0.0 {
+                return textSize
             }else {
-                if let textWidth = title?.textWidth(font: UIFont.systemFont(ofSize: 14)) {
-                    width = textWidth
-                    return width
+                if var size = title?.size(font: UIFont.systemFont(ofSize: 14), maxWidth: ItemInfo.maxWidth, maxHeight: 200) {
+                    size = CGSize(width: size.width + 16, height: size.height + 16)
+                    textSize = size
+                    return textSize
                 }
-                return 0.0
+                return CGSize.zero
             }
         }
     }
     
-  
+    
 }

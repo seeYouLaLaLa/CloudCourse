@@ -12,6 +12,8 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBar.layerBottomShadow()
+        
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.black, .font : UIFont.boldSystemFont(ofSize: 16)]
         UINavigationBar.appearance().backgroundColor = UIColor.white
         UINavigationBar.appearance().tintColor = UIColor.red

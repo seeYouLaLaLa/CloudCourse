@@ -11,22 +11,26 @@ import UIKit
 class HomeViewCell: UICollectionViewCell {
     var item: Item? {
         didSet {
-            textLabel?.text = item?.title
+            textButton?.setTitle(item?.title, for: UIControlState.normal)
         }
     }
-    var textLabel: UILabel?
+    var textButton: UIButton?
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        textLabel = UILabel()
-        textLabel?.font = UIFont.systemFont(ofSize: 14)
-        textLabel?.textColor = UIColor.white
-        self.contentView.addSubview(textLabel!)
+        textButton = UIButton.init()
+        textButton?.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        textButton?.setTitleColor(UIColor.white, for: UIControlState.normal)
+        textButton?.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        textButton?.titleLabel?.numberOfLines = 0
+        textButton?.layer.cornerRadius = 3
+        textButton?.backgroundColor = UIColor.random()
+        self.contentView.addSubview(textButton!)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        textLabel?.frame = self.bounds
+        textButton?.frame = self.bounds
     }
     
     required init?(coder aDecoder: NSCoder) {
