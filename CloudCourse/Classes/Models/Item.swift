@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+
 struct ItemInfo {
-   static let sectionInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8)
+   static let sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
    static let maxWidth = UIScreen.main.bounds.width - sectionInset.left - sectionInset.right - 16
 }
 class Item : NSObject {
@@ -25,14 +27,13 @@ class Item : NSObject {
                 return textSize
             }else {
                 if var size = title?.size(font: UIFont.systemFont(ofSize: 14), maxWidth: ItemInfo.maxWidth, maxHeight: 200) {
-                    size = CGSize(width: size.width + 16, height: size.height + 16)
+                    size = CGSize(width: size.width + 8, height: size.height + 6)
                     textSize = size
                     return textSize
                 }
                 return CGSize.zero
             }
         }
-    }
-    
+    }    
     
 }

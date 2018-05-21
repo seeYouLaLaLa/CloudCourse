@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.7.2)
+  - FDFullscreenPopGesture (1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
+  - FDFullscreenPopGesture (= 1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FDFullscreenPopGesture
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
 
-PODFILE CHECKSUM: d462cf1547d209ded943e528389e6d4c862de50e
+PODFILE CHECKSUM: e5b12318954f1b3de28471c619a90791ffffffb8
 
 COCOAPODS: 1.5.2

@@ -10,11 +10,7 @@ import UIKit
 
 extension String {
     
-    func width(font:UIFont) -> CGFloat {
-        return width(font: font, maxWidth: CGFloat(MAXFLOAT))
-    }
-    
-    func width(font:UIFont, maxWidth:CGFloat) -> CGFloat {
+    func width(font:UIFont, maxWidth: CGFloat = CGFloat(MAXFLOAT)) -> CGFloat {
         return size(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).width
     }
     

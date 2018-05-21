@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7110F7520B1AEAB00F3AD91 /* ANavigtionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110F7420B1AEAB00F3AD91 /* ANavigtionBar.swift */; };
+		B7110F7820B1CAC200F3AD91 /* tap.caf in Resources */ = {isa = PBXBuildFile; fileRef = B7110F7720B1CAC200F3AD91 /* tap.caf */; };
+		B7110F7A20B1E21800F3AD91 /* ExtensionUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */; };
 		B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */; };
 		B7B5390E20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390C20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift */; };
 		B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390F20AE7C6800F60527 /* AppDelegate.swift */; };
@@ -17,6 +20,7 @@
 		B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */; };
 		B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415220B0220500481D7F /* ExtensionUIView.swift */; };
 		B7CE415520B0285E00481D7F /* ExtensionCAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */; };
+		B7CE415920B0AC9500481D7F /* CourseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */; };
 		B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */; };
 		B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */; };
 		B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */; };
@@ -30,6 +34,9 @@
 /* Begin PBXFileReference section */
 		190CB44D20A97DBD0054DCFB /* CloudCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718E03EB7D30DE4E4293F8BB /* Pods-CloudCourse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudCourse.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse.release.xcconfig"; sourceTree = "<group>"; };
+		B7110F7420B1AEAB00F3AD91 /* ANavigtionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANavigtionBar.swift; sourceTree = "<group>"; };
+		B7110F7720B1CAC200F3AD91 /* tap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.caf; sourceTree = "<group>"; };
+		B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIDevice.swift; sourceTree = "<group>"; };
 		B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		B7B5390C20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALeftAlignedFlowLayout.swift; sourceTree = "<group>"; };
 		B7B5390F20AE7C6800F60527 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		B7CE415220B0220500481D7F /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCAAnimation.swift; sourceTree = "<group>"; };
+		B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCategoryViewController.swift; sourceTree = "<group>"; };
 		B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B5390C20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift */,
+				B7110F7420B1AEAB00F3AD91 /* ANavigtionBar.swift */,
 			);
 			path = CustomCls;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 		B7C5C6C020ACAB2C00A40BEC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B7110F7720B1CAC200F3AD91 /* tap.caf */,
 				B7C5C6C120ACAB2C00A40BEC /* main-vc-setting.json */,
 			);
 			path = Resource;
@@ -162,6 +172,7 @@
 				B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */,
 				B7CE415220B0220500481D7F /* ExtensionUIView.swift */,
 				B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */,
+				B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */,
 			);
 			path = ExtensionCls;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 			children = (
 				B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */,
 				B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */,
+				B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7110F7820B1CAC200F3AD91 /* tap.caf in Resources */,
 				B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */,
 				B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */,
 				B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */,
@@ -322,10 +335,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,9 +364,12 @@
 				B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */,
 				B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
+				B7110F7520B1AEAB00F3AD91 /* ANavigtionBar.swift in Sources */,
 				B7B5390E20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift in Sources */,
 				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
+				B7110F7A20B1E21800F3AD91 /* ExtensionUIDevice.swift in Sources */,
 				B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */,
+				B7CE415920B0AC9500481D7F /* CourseCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

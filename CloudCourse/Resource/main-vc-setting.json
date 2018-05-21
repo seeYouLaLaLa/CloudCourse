@@ -1,12 +1,18 @@
 [
     {
         "vc":"HomeViewController",
-        "title":"CloudCourse",
+        "title":"匠心云课堂",
         "icon":"ic_home_icon"
     },
     {
+         "vc":"CourseCategoryViewController",
+         "title":"课程分类",
+         "icon":"ic_category_icon"
+    },
+    {
         "vc":"MineViewController",
-        "title":"Mine",
+        "title":"我的",
         "icon":"ic_mine_icon"
     }
+ 
 ]

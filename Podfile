@@ -6,6 +6,7 @@ target 'CloudCourse' do
   use_frameworks!
   
   pod 'Alamofire', '~>4.7.2'
+  pod 'FDFullscreenPopGesture', '1.1'
 
 end
 

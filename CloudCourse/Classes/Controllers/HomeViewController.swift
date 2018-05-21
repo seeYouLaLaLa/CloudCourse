@@ -15,46 +15,49 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "CloudCourse"
-        self.view.backgroundColor = UIColor.rgb(red: 255, green: 0, blue:0)
+        self.view.backgroundColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: UIImageView.init(image: UIImage(named: "ic_logo")))
         let item0 = Item()
-        item0.title = "我就是"
+        item0.title = "纸"
         
         let item1 = Item()
-        item1.title = "踏遍上海滩的"
+        item1.title = "上"
         
         let item2 = Item()
-        item2.title = "红头发的"
+        item2.title = "得"
         
         let item3 = Item()
-        item3.title = "程序员就是啊程序员就是啊程序员就是啊程序员就是啊程序员就是啊程序员就是啊"
+        item3.title = "来"
         
         let item4 = Item()
-        item4.title = "哈哈哈"
+        item4.title = "终"
         
         let item5 = Item()
-        item5.title = "你不知道么"
+        item5.title = "觉"
         
         let item6 = Item()
-        item6.title = "其实"
+        item6.title = "浅"
         
         let item7 = Item()
-        item7.title = "我就是当年"
+        item7.title = "绝"
         
         let item8 = Item()
-        item8.title = "踏遍上海滩的"
+        item8.title = "知"
         
         let item9 = Item()
-        item9.title = "许文强转世"
+        item9.title = "此"
         
         let item10 = Item()
-        item10.title = "走着走着"
+        item10.title = "事"
         
         let item11 = Item()
-        item11.title = "就散了"
+        item11.title = "要"
         
         let item12 = Item()
-        item12.title = "就不知道了"
+        item12.title = "躬"
+        let item13 = Item()
+        item13.title = "行"
+
         
         items0.append(item0)
         items0.append(item1)
@@ -69,31 +72,32 @@ class HomeViewController: UIViewController {
         items0.append(item10)
         items0.append(item11)
         items0.append(item12)
+        items0.append(item13)
 
         
         let item100 = Item()
-        item100.title = "xxx"
+        item100.title = "A"
         
         let item111 = Item()
-        item111.title = "戏码阿斯顿撒"
+        item111.title = "B"
         
         let item122 = Item()
-        item122.title = "123423423"
+        item122.title = "C"
         
         let item133 = Item()
-        item133.title = "121"
+        item133.title = "D"
         
         let item144 = Item()
-        item144.title = "oop"
+        item144.title = "E"
         
         let item155 = Item()
-        item155.title = "p'p'f'p"
+        item155.title = "F"
         
         let item166 = Item()
-        item166.title = "as"
+        item166.title = "G"
         
         let item177 = Item()
-        item177.title = "20我就是ww"
+        item177.title = "H"
         
         
         items1.append(item100)
@@ -110,10 +114,11 @@ class HomeViewController: UIViewController {
 
     }
     
-    
     lazy var itemLayout:UICollectionViewFlowLayout = {
-        let layout = ALeftAlignedFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8)
+        let layout = UICollectionViewFlowLayout()
+        let itemWH = (UIScreen.main.bounds.width - 56) * 0.25
+        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        layout.itemSize = CGSize(width: itemWH, height: itemWH)
         layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
         return layout
@@ -132,7 +137,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController:UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 10;
+        return 3;
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section % 2 == 0 {
@@ -153,13 +158,11 @@ extension HomeViewController:UICollectionViewDataSource {
 }
 
 extension HomeViewController:UICollectionViewDelegate {
-    
-}
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.section % 2 == 0 {
-            return items0[indexPath.item].itemSize
-        }
-        return items1[indexPath.item].itemSize
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(MineViewController(), animated: true)
     }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
 }

@@ -21,10 +21,11 @@ class HomeViewCell: UICollectionViewCell {
         textButton = UIButton.init()
         textButton?.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         textButton?.setTitleColor(UIColor.white, for: UIControlState.normal)
-        textButton?.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        textButton?.contentEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
         textButton?.titleLabel?.numberOfLines = 0
         textButton?.layer.cornerRadius = 3
-        textButton?.backgroundColor = UIColor.random()
+        textButton?.backgroundColor = UIColor.kBlue()
+        textButton?.isUserInteractionEnabled = false
         self.contentView.addSubview(textButton!)
     }
     
