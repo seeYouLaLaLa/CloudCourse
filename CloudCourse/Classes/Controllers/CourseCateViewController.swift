@@ -1,5 +1,5 @@
 //
-//  CourseCategoryViewController.swift
+//  CourseCateViewController.swift
 //  CloudCourse
 //
 //  Created by FSAnonymous on 20/5/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseCategoryViewController: UIViewController {
+class CourseCateViewController: BaseViewController {
     struct ItemIdentifier {
         static let UITableViewCellId: String = "UITableViewCell"
     }
@@ -42,7 +42,7 @@ class CourseCategoryViewController: UIViewController {
     }()
     
 }
-extension CourseCategoryViewController:UITableViewDataSource {
+extension CourseCateViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hairStyleItems.count
     }
@@ -67,7 +67,7 @@ extension CourseCategoryViewController:UITableViewDataSource {
     
     
 }
-extension CourseCategoryViewController:UITableViewDelegate {
+extension CourseCateViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor.white

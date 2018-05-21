@@ -8,16 +8,28 @@
 
 import UIKit
 extension UIView {
-    open func layerTopShadow() -> Void {
+    open func shadowToTop() -> Void {
         self.layerShadow(color: UIColor.gray,
                          offset: CGSize(width: 0, height: -1.5),
                          radius: 1.5)
     }
     
-    open func layerBottomShadow() -> Void {
+    open func shadowToBottom() -> Void {
         self.layerShadow(color: UIColor.gray,
                          offset: CGSize(width: 0, height: 1.5),
                          radius: 1.5)
+    }
+    
+    open func lineToNav() -> Void {
+        self.layerShadow(color: UIColor.kLightGray(),
+                         offset: CGSize(width: 0, height: 0.5),
+                         radius: 0.5)
+    }
+    
+    open func hiddenNavLine() -> Void {
+        self.layerShadow(color: UIColor.kLightGray(),
+                         offset: CGSize(width: 0, height: 0),
+                         radius: 0)
     }
     
     open func layerShadow(color: UIColor,

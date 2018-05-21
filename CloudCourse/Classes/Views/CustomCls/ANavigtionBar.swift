@@ -9,6 +9,19 @@
 import UIKit
 
 class ANavigtionBar: UINavigationBar {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.titleTextAttributes = [.foregroundColor : UIColor.kBlack(), .font : UIFont.systemFont(ofSize: 17)]
+        self.tintColor = UIColor.white
+        self.barTintColor = UIColor.white
+        self.shadowImage = UIImage()
+        self.setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         for view in subviews {

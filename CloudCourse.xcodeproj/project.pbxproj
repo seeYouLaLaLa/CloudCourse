@@ -18,9 +18,11 @@
 		B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */; };
 		B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CA20AD23B000A40BEC /* Item.swift */; };
 		B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */; };
+		B7CA6DA920B26FB500F147BC /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DA820B26FB500F147BC /* ExtensionUIViewController.swift */; };
+		B7CA6DAB20B278D600F147BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DAA20B278D600F147BC /* BaseViewController.swift */; };
 		B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415220B0220500481D7F /* ExtensionUIView.swift */; };
 		B7CE415520B0285E00481D7F /* ExtensionCAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */; };
-		B7CE415920B0AC9500481D7F /* CourseCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */; };
+		B7CE415920B0AC9500481D7F /* CourseCateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415820B0AC9500481D7F /* CourseCateViewController.swift */; };
 		B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */; };
 		B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */; };
 		B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */; };
@@ -45,9 +47,12 @@
 		B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		B7C5C6CA20AD23B000A40BEC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		B7CA6DA820B26FB500F147BC /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
+		B7CA6DAA20B278D600F147BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B7CA6DAC20B291B600F147BC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B7CE415220B0220500481D7F /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCAAnimation.swift; sourceTree = "<group>"; };
-		B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCategoryViewController.swift; sourceTree = "<group>"; };
+		B7CE415820B0AC9500481D7F /* CourseCateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCateViewController.swift; sourceTree = "<group>"; };
 		B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -169,10 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */,
+				B7CA6DA820B26FB500F147BC /* ExtensionUIViewController.swift */,
+				B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */,
 				B7C5C6C520AD1F9D00A40BEC /* ExtensionUIColor.swift */,
 				B7CE415220B0220500481D7F /* ExtensionUIView.swift */,
 				B7C5C6CC20AD267100A40BEC /* ExtensionString.swift */,
-				B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */,
 			);
 			path = ExtensionCls;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			children = (
 				B7E0B46A20AC2F9A000272C2 /* MainViewController.swift */,
 				B7E0B46B20AC2F9A000272C2 /* NavigationController.swift */,
+				B7CA6DAA20B278D600F147BC /* BaseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,7 +230,7 @@
 			children = (
 				B7E0B46D20AC2F9A000272C2 /* HomeViewController.swift */,
 				B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */,
-				B7CE415820B0AC9500481D7F /* CourseCategoryViewController.swift */,
+				B7CE415820B0AC9500481D7F /* CourseCateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -359,17 +366,19 @@
 				B7CE415520B0285E00481D7F /* ExtensionCAAnimation.swift in Sources */,
 				B7E0B47720AC2F9A000272C2 /* NavigationController.swift in Sources */,
 				B7E0B47620AC2F9A000272C2 /* MainViewController.swift in Sources */,
+				B7CA6DAB20B278D600F147BC /* BaseViewController.swift in Sources */,
 				B7B5391320AE7E2700F60527 /* X.swift in Sources */,
 				B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */,
 				B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */,
 				B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
+				B7CA6DA920B26FB500F147BC /* ExtensionUIViewController.swift in Sources */,
 				B7110F7520B1AEAB00F3AD91 /* ANavigtionBar.swift in Sources */,
 				B7B5390E20AE7BE400F60527 /* ALeftAlignedFlowLayout.swift in Sources */,
 				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
 				B7110F7A20B1E21800F3AD91 /* ExtensionUIDevice.swift in Sources */,
 				B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */,
-				B7CE415920B0AC9500481D7F /* CourseCategoryViewController.swift in Sources */,
+				B7CE415920B0AC9500481D7F /* CourseCateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +389,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B7E0B47320AC2F9A000272C2 /* Base */,
+				B7CA6DAC20B291B600F147BC /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -391,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -452,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

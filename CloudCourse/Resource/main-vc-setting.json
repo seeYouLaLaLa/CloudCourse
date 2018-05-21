@@ -5,7 +5,7 @@
         "icon":"ic_home_icon"
     },
     {
-         "vc":"CourseCategoryViewController",
+         "vc":"CourseCateViewController",
          "title":"课程分类",
          "icon":"ic_category_icon"
     },

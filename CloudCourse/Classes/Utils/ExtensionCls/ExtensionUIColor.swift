@@ -19,7 +19,7 @@ extension UIColor {
     }
     
     open class func kBlack() -> UIColor {
-        return rgb(red: 51, green: 51, blue: 51)
+        return rgb(red: 70, green: 70, blue: 70)
     }
     
     open class func kGray() -> UIColor {

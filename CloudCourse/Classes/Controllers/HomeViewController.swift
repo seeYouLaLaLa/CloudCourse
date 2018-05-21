@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     static let itemIdentifier = "HomeViewCell"
     var items0 = [Item]()
     var items1 = [Item]()
@@ -111,7 +111,7 @@ class HomeViewController: UIViewController {
         
         
         self.view.addSubview(homeColletionView)
-
+        
     }
     
     lazy var itemLayout:UICollectionViewFlowLayout = {
@@ -124,12 +124,18 @@ class HomeViewController: UIViewController {
         return layout
     }()
     
+    
     lazy var homeColletionView:UICollectionView = {
-        let colletionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: itemLayout)
+        let colletionView = UICollectionView.init(frame: UIDevice.visibleInNavTabRect(), collectionViewLayout: itemLayout)
         colletionView.backgroundColor = UIColor.white
         colletionView.dataSource = self;
         colletionView.delegate = self;
         colletionView.register(HomeViewCell.classForCoder(), forCellWithReuseIdentifier:HomeViewController.itemIdentifier)
+        if #available(iOS 11, *) {
+            colletionView.contentInsetAdjustmentBehavior = .never
+        }else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         return colletionView
     }()
     

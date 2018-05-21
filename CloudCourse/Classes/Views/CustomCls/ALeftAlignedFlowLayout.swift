@@ -15,14 +15,12 @@ class ALeftAlignedFlowLayout: UICollectionViewFlowLayout {
             return super.layoutAttributesForElements(in: rect);
         }
         var prevFrame:CGRect = CGRect.zero
-        print("first \(String(describing: layoutAttibutesArr.first?.indexPath.section)) + \(String(describing: layoutAttibutesArr.first?.indexPath.item)) + \(prevFrame)")
         for layoutAttibutes in layoutAttibutesArr {
             if (layoutAttibutes.representedElementKind == nil) {
                 layoutAttibutes.frame = self.layoutAttributesForItem(layoutAttibutes: layoutAttibutes, prevFrame: prevFrame).frame;
             }
             prevFrame = layoutAttibutes.frame
         }
-        print("last \(String(describing: layoutAttibutesArr.last?.indexPath.section)) + \(String(describing: layoutAttibutesArr.last?.indexPath.item))  + \(prevFrame)")
         return layoutAttibutesArr;
     }
     

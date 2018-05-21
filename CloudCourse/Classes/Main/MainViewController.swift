@@ -14,7 +14,7 @@ class MainViewController: UITabBarController {
     var tabBarColor = [UIColor.kBlue(),UIColor.kRed(),UIColor.kGreen()]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.layerTopShadow()
+        self.tabBar.shadowToTop()
 
         UITabBar.appearance().backgroundColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.white
@@ -70,11 +70,6 @@ class MainViewController: UITabBarController {
             if tabBarSubView.isKind(of: NSClassFromString("UITabBarButton")!) {
                 buttons.append(tabBarSubView)
             }
-            if(tabBarSubView.isKind(of: NSClassFromString("_UIBarBackground")!)) {
-                tabBarIndicator = UIView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
-                tabBarIndicator?.backgroundColor = UIColor.kBlue()
-                (tabBarSubView as AnyObject).insertSubview(tabBarIndicator!, at: 0)
-            }
         }
         return buttons
     }
@@ -92,5 +87,14 @@ class MainViewController: UITabBarController {
         let url = URL(fileURLWithPath: path!)
         AudioServicesCreateSystemSoundID(url as CFURL, &soundId)
         AudioServicesPlaySystemSound(soundId);
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if tabBarIndicator == nil {
+            tabBarIndicator = UIView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
+            tabBarIndicator?.backgroundColor = UIColor.kBlue()
+            self.tabBar.insertSubview(tabBarIndicator!, at: 0)
+        }
     }
 }
