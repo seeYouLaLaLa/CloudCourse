@@ -10,6 +10,9 @@ import UIKit
 extension UIColor {
     static let CGFloat255 = CGFloat(255)
     
+    open class func page() -> UIColor {
+        return rgb(red: 245, green: 245, blue: 245)
+    }
     open class func main() -> UIColor {
         return UIColor.orange
     }
@@ -40,6 +43,10 @@ extension UIColor {
     
     open class func kRed() -> UIColor {
         return rgb(red: 250, green: 60, blue: 30)
+    }
+    
+    open class func rgb(_ red:Int,_ green:Int,_ blue:Int) -> UIColor {
+        return rgb(red: red, green: green, blue: blue)
     }
     
     open class func rgb(red:Int,green:Int,blue:Int) -> UIColor {

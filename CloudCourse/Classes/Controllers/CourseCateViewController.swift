@@ -41,8 +41,13 @@ class CourseCateViewController: BaseViewController {
         return view
     }()
     
+    @objc override func shouldShowBackItem() -> Bool {
+        return false
+    }
+   
 }
 extension CourseCateViewController:UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hairStyleItems.count
     }
@@ -73,7 +78,7 @@ extension CourseCateViewController:UITableViewDelegate {
         cell?.contentView.backgroundColor = UIColor.white
         cell?.textLabel?.textColor = UIColor.kBlack()
         self.prevIndex = indexPath.item
-        tableView .reloadData()
+        tableView.reloadData()
     }
 }
 

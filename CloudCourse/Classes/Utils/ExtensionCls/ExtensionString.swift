@@ -14,11 +14,11 @@ extension String {
         return size(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).width
     }
     
-    func height(font:UIFont,maxWidth:CGFloat) -> CGFloat {
+    func height(font: UIFont,maxWidth: CGFloat) -> CGFloat {
         return size(font: font, maxWidth: maxWidth, maxHeight: CGFloat(MAXFLOAT)).height
     }
     
-    func size(font:UIFont, maxWidth:CGFloat, maxHeight:CGFloat) -> CGSize {
+    func size(font: UIFont, maxWidth:CGFloat, maxHeight: CGFloat) -> CGSize {
         let size = self.boundingRect(with: CGSize(width: maxWidth, height: maxHeight), options: .usesLineFragmentOrigin, attributes: [.font:font], context: nil).size
         return CGSize(width: ceil(size.width), height: ceil(size.height))
         

@@ -1,5 +1,5 @@
 //
-//  HorizontalWaterFlowLayout.swift
+//  XGLeftAlignedFlowLayout.swift
 //  CloudCourse
 //
 //  Created by FSAnonymous on 17/5/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ALeftAlignedFlowLayout: UICollectionViewFlowLayout {
+class XGLeftAlignedFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let layoutAttibutesArr = super.layoutAttributesForElements(in: rect) else {
@@ -18,8 +18,8 @@ class ALeftAlignedFlowLayout: UICollectionViewFlowLayout {
         for layoutAttibutes in layoutAttibutesArr {
             if (layoutAttibutes.representedElementKind == nil) {
                 layoutAttibutes.frame = self.layoutAttributesForItem(layoutAttibutes: layoutAttibutes, prevFrame: prevFrame).frame;
+                prevFrame = layoutAttibutes.frame
             }
-            prevFrame = layoutAttibutes.frame
         }
         return layoutAttibutesArr;
     }

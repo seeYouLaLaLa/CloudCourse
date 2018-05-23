@@ -14,57 +14,120 @@ enum NavBarStyle {
     case blur
 
 }
-class BaseViewController: UIViewController {
-    private var navigationBar: UIView?
-    private var navigationBlur: UIVisualEffectView?
-    private var titleView: UIButton?
 
+class BaseViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar = UIView()
-        navigationBar?.backgroundColor = UIColor.white
-        let blurEffect  = UIBlurEffect.init(style: UIBlurEffectStyle.extraLight)
-        navigationBlur = UIVisualEffectView.init(effect: blurEffect)
-        navigationBlur?.isHidden = true
-        navigationBar?.addSubview(navigationBlur!)
-        self.view.addSubview(navigationBar!)
-        
-        titleView = UIButton()
-        titleView?.contentEdgeInsets = .zero
-        titleView?.isHidden = false
+        view.addSubview(navigationBar)
+        displayBackItem()
     }
    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let navRect = (self.navigationController?.navigationBar.frame)
-        navigationBar?.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: (navRect?.size.width)!, height: (navRect?.maxY)!))
-        navigationBlur?.frame = (navigationBar?.bounds)!
-        self.view.bringSubview(toFront: navigationBar!)
+        if !fd_prefersNavigationBarHidden {
+            view.bringSubview(toFront: navigationBar)
+        }
     }
+    
+    final lazy var titleView: UIButton = {
+        let view = UIButton()
+        view.contentEdgeInsets = .zero
+        view.isHidden = true
+        view.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        return view
+    }()
+    
+    final lazy var navigationBar: XGGradientView = {
+        let view = XGGradientView()
+        view.frame = KRect.navBarRect()
+        view.backgroundColor = UIColor.white
+        view.addSubview(navigationBlur)
+        return view
+    }()
+    
+    final lazy var navigationBlur: UIVisualEffectView = {
+        let effectView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: UIBlurEffectStyle.extraLight))
+        effectView.frame = KRect.navBarRect()
+        effectView.backgroundColor = UIColor.white
+        effectView.isHidden = true
+        return effectView
+    }()
    
+    func shouldShowBackItem() -> Bool {
+        return true
+    }
+    
+    @objc func backItemAction() -> Void {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension BaseViewController {
     
-    final func navigationTitle(title:String) {
-        navigationTitle(title: title,titleColor: UIColor.kBlack())
+    final func displayBackItem() -> Void {
+        self.navigationItem.hidesBackButton = true;
+        if shouldShowBackItem() {
+            itemInNavBarLeft(true, item:  UIBarButtonItem.buttonItem(imageName: "ic_back_item",tintColor:UIColor.kBlack(),  target: self, action: #selector(backItemAction)))
+        }
+    }
+    
+    final func itemInNavBarLeft(_ left: Bool, item: UIBarButtonItem) -> Void {
+        let insetItem = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        insetItem.width = -22
+        if left {
+            if #available(iOS 11, *) {
+                self.navigationItem.leftBarButtonItems = [item]
+            }else {
+                if #available(iOS 10, *) {} else {
+                    insetItem.width = -KRect.pageInset().left
+                }
+                self.navigationItem.leftBarButtonItems = [insetItem,item]
+            }
+        }else {
+            if #available(iOS 11, *) {
+                self.navigationItem.rightBarButtonItems = [item]
+            }else {
+                if #available(iOS 10, *) {} else {
+                    insetItem.width = -KRect.pageInset().left
+                }
+                self.navigationItem.rightBarButtonItems = [insetItem,item]
+            }
+        }
+    }
+    
+    final func naviBottomLine(_ show: Bool) {
+        if show { navigationBar.lineToNav() } else { navigationBar.hiddenNavLine() }
+        
+    }
+    
+    final func naviTitle(title: String) {
+       
+        naviTitle(title: title, titleColor: UIColor.kBlack())
+    
     }
 
-    final func navigationTitle(title:String, titleColor: UIColor) {
-        titleView?.isHidden = false
-        titleView?.setTitle(title, for: .normal)
-        titleView?.titleLabel?.font = UIFont.systemFont(ofSize: 17)
-        titleView?.setTitleColor(titleColor, for: .normal)
-        titleView?.sizeToFit()
-        self.navigationItem.titleView = titleView
+    final func naviTitle(title:String, titleColor: UIColor) {
+        
+        titleView.isHidden = false
+        titleView.setTitle(title, for: .normal)
+        titleView.setTitleColor(titleColor, for: .normal)
+        titleView.sizeToFit()
+        
+        navigationItem.titleView = titleView
     }
     
-    final func navigationBarColor(color: UIColor) -> Void {
-        self.navigationBarColor(color: color, style: .defalut)
+    final func naviBarColor(color: UIColor) -> Void {
+        
+        naviBarColor(color: color, style: .defalut)
+        
     }
     
-    final func navigationBarColor(color: UIColor, style: NavBarStyle) -> Void {
-        self.navigationBlur?.isHidden = style != .blur
-        self.navigationBar?.backgroundColor = color
+    final func naviBarColor(color: UIColor, style: NavBarStyle) -> Void {
+        
+        navigationBlur.isHidden = style != .blur
+        
+        navigationBar.backgroundColor = color
+        
     }
 }

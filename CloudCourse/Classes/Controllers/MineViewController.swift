@@ -12,61 +12,96 @@ struct ItemIdentifier {
     static let UITableViewCellId: String = "UITableViewCell"
 }
 class MineViewController: BaseViewController {
-    let scaleView = UIView()
-
+    var refreshControl: Any! = nil
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBarColor(color: UIColor.kGreen())
-        self.view.backgroundColor = UIColor.white;
-        self.scaleView.backgroundColor = UIColor.kGreen()
-        self.scaleView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 0.5)
-        self.view.addSubview(mineTableView)
-        self.mineTableView.insertSubview(self.scaleView, at: 0)
-        self.navigationTitle(title: "个人中心", titleColor: UIColor.white)
+        naviBarColor(color: UIColor.kGreen())
+        naviBottomLine(false)
+    
+        itemInNavBarLeft(true, item: UIBarButtonItem.buttonItem(imageName: "ic_mine_news", tintColor:UIColor.white,  target: nil, action: nil))
+        
+        itemInNavBarLeft(false, item: UIBarButtonItem.buttonItem(imageName: "ic_mine_setting", tintColor:UIColor.white,  target: nil, action: nil))
+        
+        navigationItem.titleView = UIImageView.init(image: UIImage(named: "ic_mine_title"))
+        
+        view.addSubview(mineTableView)
+        
+        mineTableView.insertSubview(stretchView, at: 0)
+        
+        if #available(iOS 11, *) {
+            mineTableView.contentInsetAdjustmentBehavior = .never
+        }else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        
+        navigationBar.setGradient(colors: [UIColor.kLightGray().cgColor,UIColor.kGreen().cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 1, y: 0))
+
     }
     
+    lazy var stretchView: XGGradientView = {
+       let view = XGGradientView.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: KRect.screenWidth(), height: 0.5)))
+        view.setGradient(colors: [UIColor.kLightGray().cgColor,UIColor.kGreen().cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 1, y: 0))
+        return view
+    }()
+    
     lazy var mineTableView: UITableView = {
-        let tableView = UITableView.init(frame: self.view.bounds)
+        let tableView = UITableView.init(frame: KRect.visibleInNavTabRect())
+        tableView.estimatedSectionFooterHeight = 0.0
+        tableView.estimatedSectionHeaderHeight = 0.0
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        tableView.backgroundColor = UIColor.page();
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = UIColor.white
-        tableView.separatorColor = UIColor.kGray()
+        tableView.separatorColor = UIColor.kLightGray()
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = tableHeaderView
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: ItemIdentifier.UITableViewCellId)
+        let refreshView = UIRefreshControl()
+        refreshView.tintColor = UIColor.white
+        refreshView.addTarget(self, action: #selector(refreshData), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshView)
+        refreshControl = refreshView
         return tableView
     }()
     
     lazy var tableHeaderView: UIView = {
-        let W:CGFloat = self.view.bounds.size.width;
-        let H:CGFloat = 140
-        let headIconWH:CGFloat = 60
-        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: W, height: H))
-        view.backgroundColor = UIColor.kGreen()
-        let headIcon = UIImageView(image: UIImage(named: "ic_head_icon"))
-        headIcon.frame = CGRect(x: 16, y: (H - headIconWH) * 0.5, width: headIconWH, height: headIconWH)
-        headIcon.backgroundColor = UIColor.kGray()
-        headIcon.layer.cornerRadius = headIconWH * 0.5
-        headIcon.contentMode = .scaleAspectFit
-        headIcon.clipsToBounds = true
-        view.addSubview(headIcon)
+        let view = MineHeaderView()
         return view
     }()
+    
+    @objc func refreshData() -> Void {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            (self.refreshControl as AnyObject).endRefreshing()
+            
+        }
+    }
+    
 }
 
 extension MineViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+       return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 100 : 200
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemIdentifier.UITableViewCellId, for: indexPath)
         cell.contentView.backgroundColor = UIColor.white
+        let view = UIView()
+        view.backgroundColor = UIColor.kLightGray()
+        cell.selectedBackgroundView = view
         return cell
     }
 }
@@ -74,12 +109,20 @@ extension MineViewController: UITableViewDataSource {
 extension MineViewController: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10.0
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.clear
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y;
-        self.scaleView.frame.origin.y = offsetY > 0 ? 0.5 : offsetY;
-        self.scaleView.frame.size.height = offsetY > 0 ? 0.5 : -offsetY
+        stretchView.frame.origin.y = offsetY > 0 ? 0.5 : offsetY;
+        stretchView.frame.size.height = offsetY > 0 ? 0.5 : -offsetY
     }
 }

@@ -58,7 +58,7 @@ class MainViewController: UITabBarController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = UIImage(named: icon)
         viewController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0,vertical: -2)
-        let nav = NavigationController.init(navigationBarClass: ANavigtionBar.self, toolbarClass: UIToolbar.self)
+        let nav = NavigationController.init(navigationBarClass: XYNavigationBar.self, toolbarClass: UIToolbar.self)
         nav.pushViewController(viewController, animated: true)
         
         self.addChildViewController(nav);
