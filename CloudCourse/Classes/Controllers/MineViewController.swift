@@ -43,13 +43,13 @@ class MineViewController: BaseViewController {
     }
     
     lazy var stretchView: XGGradientView = {
-       let view = XGGradientView.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: KRect.screenWidth(), height: 0.5)))
+       let view = XGGradientView.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: XGRect.screenWidth(), height: 0.5)))
         view.setGradient(colors: [UIColor.kLightGray().cgColor,UIColor.kGreen().cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 1, y: 0))
         return view
     }()
     
     lazy var mineTableView: UITableView = {
-        let tableView = UITableView.init(frame: KRect.visibleInNavTabRect())
+        let tableView = UITableView.init(frame: XGRect.visibleInNavTabRect())
         tableView.estimatedSectionFooterHeight = 0.0
         tableView.estimatedSectionHeaderHeight = 0.0
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine

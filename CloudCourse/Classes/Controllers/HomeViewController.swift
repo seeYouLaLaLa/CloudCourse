@@ -127,7 +127,7 @@ class HomeViewController: BaseViewController {
     
     
     lazy var homeColletionView:UICollectionView = {
-        let colletionView = UICollectionView.init(frame: KRect.visibleInNavTabRect(), collectionViewLayout: itemLayout)
+        let colletionView = UICollectionView.init(frame: XGRect.visibleInNavTabRect(), collectionViewLayout: itemLayout)
         colletionView.backgroundColor = UIColor.white
         colletionView.dataSource = self;
         colletionView.delegate = self;

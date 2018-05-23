@@ -12,7 +12,7 @@ class MineHeaderView: XGGradientView {
     
     let kHeight: CGFloat = 100
     let kIconHeight: CGFloat = 60
-    let kWidth: CGFloat = KRect.screenWidth();
+    let kWidth: CGFloat = XGRect.screenWidth();
     var iconView: UIImageView!
     var nameView: UILabel!
     override init(frame: CGRect) {
@@ -27,7 +27,6 @@ class MineHeaderView: XGGradientView {
         iconView.contentMode = .scaleAspectFit
         iconView.clipsToBounds = true
         addSubview(iconView)
-        
         nameView = UILabel()
         nameView.text = "Anonymous"
         nameView.sizeToFit()
@@ -46,7 +45,7 @@ class MineHeaderView: XGGradientView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        iconView.frame = CGRect(x: KRect.pageInset().left, y: (kHeight - kIconHeight) * 0.5, width: kIconHeight, height: kIconHeight)
+        iconView.frame = CGRect(x: XGRect.pageInset().left, y: (kHeight - kIconHeight) * 0.5, width: kIconHeight, height: kIconHeight)
         nameView.frame = CGRect(x: iconView.frame.maxX + 10, y: iconView.frame.midX - 9, width: nameView.bounds.width, height: 18)
     }
     

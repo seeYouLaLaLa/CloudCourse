@@ -40,7 +40,7 @@ class BaseViewController: UIViewController {
     
     final lazy var navigationBar: XGGradientView = {
         let view = XGGradientView()
-        view.frame = KRect.navBarRect()
+        view.frame = XGRect.navBarRect()
         view.backgroundColor = UIColor.white
         view.addSubview(navigationBlur)
         return view
@@ -48,7 +48,7 @@ class BaseViewController: UIViewController {
     
     final lazy var navigationBlur: UIVisualEffectView = {
         let effectView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: UIBlurEffectStyle.extraLight))
-        effectView.frame = KRect.navBarRect()
+        effectView.frame = XGRect.navBarRect()
         effectView.backgroundColor = UIColor.white
         effectView.isHidden = true
         return effectView
@@ -80,7 +80,7 @@ extension BaseViewController {
                 self.navigationItem.leftBarButtonItems = [item]
             }else {
                 if #available(iOS 10, *) {} else {
-                    insetItem.width = -KRect.pageInset().left
+                    insetItem.width = -XGRect.pageInset().left
                 }
                 self.navigationItem.leftBarButtonItems = [insetItem,item]
             }
@@ -89,7 +89,7 @@ extension BaseViewController {
                 self.navigationItem.rightBarButtonItems = [item]
             }else {
                 if #available(iOS 10, *) {} else {
-                    insetItem.width = -KRect.pageInset().left
+                    insetItem.width = -XGRect.pageInset().left
                 }
                 self.navigationItem.rightBarButtonItems = [insetItem,item]
             }

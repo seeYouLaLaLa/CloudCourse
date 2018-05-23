@@ -1,5 +1,5 @@
 //
-//  KRect.swift
+//  XGRect.swift
 //  CloudCourse
 //
 //  Created by FSAnonymous on 21/5/18.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class KRect: NSObject {
-    
+class XGRect: NSObject {
     open class func navBarHeight() -> CGFloat {
         if isPhoneX() {
             return 88.0

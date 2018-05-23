@@ -21,7 +21,7 @@
 		B7CA6DA920B26FB500F147BC /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DA820B26FB500F147BC /* ExtensionUIViewController.swift */; };
 		B7CA6DAB20B278D600F147BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DAA20B278D600F147BC /* BaseViewController.swift */; };
 		B7CA6DB220B308DD00F147BC /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DB120B308DD00F147BC /* MineHeaderView.swift */; };
-		B7CA6DB720B30BDD00F147BC /* KRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DB620B30BDD00F147BC /* KRect.swift */; };
+		B7CA6DB720B30BDD00F147BC /* XGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DB620B30BDD00F147BC /* XGRect.swift */; };
 		B7CA6DBC20B3E83700F147BC /* ExtensionUIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DBB20B3E83700F147BC /* ExtensionUIBarButtonItem.swift */; };
 		B7CA6DBE20B43D6600F147BC /* XGGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DBD20B43D6600F147BC /* XGGradientView.swift */; };
 		B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415220B0220500481D7F /* ExtensionUIView.swift */; };
@@ -55,7 +55,7 @@
 		B7CA6DAA20B278D600F147BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B7CA6DAC20B291B600F147BC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B7CA6DB120B308DD00F147BC /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
-		B7CA6DB620B30BDD00F147BC /* KRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRect.swift; sourceTree = "<group>"; };
+		B7CA6DB620B30BDD00F147BC /* XGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGRect.swift; sourceTree = "<group>"; };
 		B7CA6DBB20B3E83700F147BC /* ExtensionUIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIBarButtonItem.swift; sourceTree = "<group>"; };
 		B7CA6DBD20B43D6600F147BC /* XGGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGGradientView.swift; sourceTree = "<group>"; };
 		B7CE415220B0220500481D7F /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		B7CA6DB520B30B8300F147BC /* CustomCls */ = {
 			isa = PBXGroup;
 			children = (
-				B7CA6DB620B30BDD00F147BC /* KRect.swift */,
+				B7CA6DB620B30BDD00F147BC /* XGRect.swift */,
 			);
 			path = CustomCls;
 			sourceTree = "<group>";
@@ -407,7 +407,7 @@
 				B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */,
 				B7110F7A20B1E21800F3AD91 /* ExtensionUIDevice.swift in Sources */,
 				B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */,
-				B7CA6DB720B30BDD00F147BC /* KRect.swift in Sources */,
+				B7CA6DB720B30BDD00F147BC /* XGRect.swift in Sources */,
 				B7CE415920B0AC9500481D7F /* CourseCateViewController.swift in Sources */,
 				B7CA6DBC20B3E83700F147BC /* ExtensionUIBarButtonItem.swift in Sources */,
 				B7CA6DB220B308DD00F147BC /* MineHeaderView.swift in Sources */,

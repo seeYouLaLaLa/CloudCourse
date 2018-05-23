@@ -18,7 +18,7 @@ extension UIBarButtonItem {
     
     open class func buttonItem(imageName: String?,title: String?, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
         let itemButton = UIButton.init()
-        itemButton.contentEdgeInsets = KRect.navgationItemInset()
+        itemButton.contentEdgeInsets = XGRect.navgationItemInset()
         if imageName != nil && title != nil {
             itemButton.titleEdgeInsets.left = 6
         }
