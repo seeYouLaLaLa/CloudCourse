@@ -33,7 +33,6 @@
 		B7E0B47920AC2F9A000272C2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0B46E20AC2F9A000272C2 /* MineViewController.swift */; };
 		B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B46F20AC2F9A000272C2 /* Assets.xcassets */; };
 		B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47220AC2F9A000272C2 /* LaunchScreen.storyboard */; };
-		B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7E0B47420AC2F9A000272C2 /* Info.plist */; };
 		EB3014A5B0047507B6300199 /* Pods_CloudCourse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0DC68D5EE38ACB0F2A65BF /* Pods_CloudCourse.framework */; };
 /* End PBXBuildFile section */
 
@@ -334,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7110F7820B1CAC200F3AD91 /* tap.caf in Resources */,
-				B7E0B47D20AC2F9A000272C2 /* Info.plist in Resources */,
 				B7E0B47C20AC2F9A000272C2 /* LaunchScreen.storyboard in Resources */,
 				B7C5C6C220ACAB2C00A40BEC /* main-vc-setting.json in Resources */,
 				B7E0B47A20AC2F9A000272C2 /* Assets.xcassets in Resources */,
@@ -371,11 +369,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CloudCourse/Pods-CloudCourse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

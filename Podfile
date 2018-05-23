@@ -6,7 +6,8 @@ target 'CloudCourse' do
   use_frameworks!
   
   pod 'Alamofire', '~>4.7.2'
-  pod 'FDFullscreenPopGesture', '1.1'
+  pod 'FDFullscreenPopGesture', '~>1.1' 
+  pod 'MJRefresh', '~>3.1.15.3'
 
 end
 

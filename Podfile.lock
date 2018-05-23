@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
   - FDFullscreenPopGesture (1.1)
+  - MJRefresh (3.1.15.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
-  - FDFullscreenPopGesture (= 1.1)
+  - FDFullscreenPopGesture (~> 1.1)
+  - MJRefresh (~> 3.1.15.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FDFullscreenPopGesture
+    - MJRefresh
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
 
-PODFILE CHECKSUM: e5b12318954f1b3de28471c619a90791ffffffb8
+PODFILE CHECKSUM: b419865e135e32cf113969e4d4463753b021484e
 
 COCOAPODS: 1.5.2
