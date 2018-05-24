@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  XGViewController.swift
 //  CloudCourse
 //
 //  Created by FSAnonymous on 21/5/18.
@@ -7,16 +7,23 @@
 //
 
 import UIKit
-enum NavBarStyle {
+import FDFullscreenPopGesture
+class XGViewController: UIViewController {
+    enum XGNavBarStyle {
+        
+        case defalut
+        
+        case blur
+        
+    }
     
-    case defalut
-    
-    case blur
+    enum XGItemPosition {
+        
+        case left
+        
+        case right
+    }
 
-}
-
-class BaseViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(navigationBar)
@@ -63,19 +70,19 @@ class BaseViewController: UIViewController {
     }
 }
 
-extension BaseViewController {
+extension XGViewController {
     
     final func displayBackItem() -> Void {
         self.navigationItem.hidesBackButton = true;
         if shouldShowBackItem() {
-            itemInNavBarLeft(true, item:  UIBarButtonItem.buttonItem(imageName: "ic_back_item",tintColor:UIColor.kBlack(),  target: self, action: #selector(backItemAction)))
+            showItem(at: .left, item:  UIBarButtonItem.item(imageName: "ic_back_item",tintColor:UIColor.kBlack(),  target: self, action: #selector(backItemAction)))
         }
     }
     
-    final func itemInNavBarLeft(_ left: Bool, item: UIBarButtonItem) -> Void {
+    final func showItem(at position: XGItemPosition, item: UIBarButtonItem) -> Void {
         let insetItem = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         insetItem.width = -22
-        if left {
+        if position == .left {
             if #available(iOS 11, *) {
                 self.navigationItem.leftBarButtonItems = [item]
             }else {
@@ -123,7 +130,7 @@ extension BaseViewController {
         
     }
     
-    final func naviBarColor(color: UIColor, style: NavBarStyle) -> Void {
+    final func naviBarColor(color: UIColor, style: XGNavBarStyle) -> Void {
         
         navigationBlur.isHidden = style != .blur
         

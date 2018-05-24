@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseCateViewController: BaseViewController {
+class CourseCateViewController: XGViewController {
     struct ItemIdentifier {
         static let UITableViewCellId: String = "UITableViewCell"
     }

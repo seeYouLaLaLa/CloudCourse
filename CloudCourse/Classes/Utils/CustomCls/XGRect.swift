@@ -8,7 +8,16 @@
 
 import UIKit
 
-class XGRect: NSObject {
+class XGRect {
+    
+    open class func sectionHeight() -> CGFloat {
+        return 10.0
+    }
+    
+    open class func itemHeight() -> CGFloat {
+        return 44.0
+    }
+    
     open class func navBarHeight() -> CGFloat {
         if isPhoneX() {
             return 88.0
@@ -58,11 +67,11 @@ class XGRect: NSObject {
     }
     
     open class func visibleInNavTabRect() -> CGRect {
-        return CGRect(x: CGPoint.zero.x, y: self.navBarHeight(), width: screenWidth(), height: screenHeight() - navBarHeight() - tabBarHeight())
+        return CGRect(x: CGPoint.zero.x, y: navBarHeight(), width: screenWidth(), height: screenHeight() - navBarHeight() - tabBarHeight())
     }
     
     open class func visibleNoTabRect() -> CGRect {
-        return CGRect(x: CGPoint.zero.x, y: self.navBarHeight(), width: screenWidth(), height: screenHeight() - navBarHeight())
+        return CGRect(x: CGPoint.zero.x, y: navBarHeight(), width: screenWidth(), height: screenHeight() - navBarHeight() - tabBarOffset())
     }
     
     open class func visibleNoNavRect() -> CGRect {

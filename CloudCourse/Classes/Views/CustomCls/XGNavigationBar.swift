@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYNavigationBar: UINavigationBar {
+class XGNavigationBar: UINavigationBar {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

@@ -10,8 +10,8 @@ import UIKit
 import AudioToolbox
 class MainViewController: UITabBarController {
     var tabBarbuttons: [Any]?
-    var tabBarIndicator: UIView?
-    var tabBarColor = [UIColor.kBlue(),UIColor.kRed(),UIColor.kGreen()]
+    var tabBarIndicator: XGGradientView?
+    var tabBarColor = [UIColor.kBlue(),UIColor.kBlue(),UIColor.kBlue()]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.shadowToTop()
@@ -58,7 +58,7 @@ class MainViewController: UITabBarController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = UIImage(named: icon)
         viewController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0,vertical: -2)
-        let nav = NavigationController.init(navigationBarClass: XYNavigationBar.self, toolbarClass: UIToolbar.self)
+        let nav = NavigationController.init(navigationBarClass: XGNavigationBar.self, toolbarClass: UIToolbar.self)
         nav.pushViewController(viewController, animated: true)
         
         self.addChildViewController(nav);
@@ -92,8 +92,9 @@ class MainViewController: UITabBarController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if tabBarIndicator == nil {
-            tabBarIndicator = UIView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
-            tabBarIndicator?.backgroundColor = UIColor.kBlue()
+            tabBarIndicator = XGGradientView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
+            let lightBlue = UIColor.rgb(60, 180, 250)
+            tabBarIndicator?.setGradient(colors: [lightBlue.cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
             self.tabBar.insertSubview(tabBarIndicator!, at: 0)
         }
     }

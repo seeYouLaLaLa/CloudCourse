@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: XGViewController {
     static let itemIdentifier = "HomeViewCell"
     var items0 = [Item]()
     var items1 = [Item]()
@@ -17,7 +17,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        itemInNavBarLeft(true, item: UIBarButtonItem.buttonItem(imageName: "ic_logo", tintColor: nil, target: nil, action: nil))
+        showItem(at: .left, item: UIBarButtonItem.item(imageName: "ic_logo", tintColor: nil, target: nil, action: nil))
         
         let item0 = Item()
         item0.title = "纸阿斯加德阿斯加德撒娇"

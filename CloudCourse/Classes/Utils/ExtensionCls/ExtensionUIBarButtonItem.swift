@@ -8,15 +8,15 @@
 
 import UIKit
 extension UIBarButtonItem {
-    open class func buttonItem(imageName: String, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
-        return buttonItem(imageName: imageName, title: nil, tintColor: tintColor, target: target, action: action)
+    open class func item(imageName: String, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
+        return item(imageName: imageName, title: nil, tintColor: tintColor, target: target, action: action)
     }
     
-    open class func buttonItem(title: String, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
-        return buttonItem(imageName: nil, title: title, tintColor: tintColor, target: target, action: action)
+    open class func item(title: String, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
+        return item(imageName: nil, title: title, tintColor: tintColor, target: target, action: action)
     }
     
-    open class func buttonItem(imageName: String?,title: String?, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
+    open class func item(imageName: String?,title: String?, tintColor: UIColor?, target: Any?, action: Selector?) -> UIBarButtonItem{
         let itemButton = UIButton.init()
         itemButton.contentEdgeInsets = XGRect.navgationItemInset()
         if imageName != nil && title != nil {
