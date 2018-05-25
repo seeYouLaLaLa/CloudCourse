@@ -14,9 +14,7 @@ class XGNavigationBar: UINavigationBar {
         
         shadowImage = UIImage()
         
-        tintColor = UIColor.kGreen()
-        
-        barTintColor = UIColor.kGreen()
+        tintColor = UIColor.main()
         
         setBackgroundImage(UIImage(), for: .default)
         

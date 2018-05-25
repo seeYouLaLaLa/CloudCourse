@@ -13,6 +13,7 @@ class NavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

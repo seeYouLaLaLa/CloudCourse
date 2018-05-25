@@ -17,7 +17,7 @@ class MineHeaderView: XGGradientView {
     var nameView: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.kGreen()
+        backgroundColor = UIColor.main()
         self.frame = CGRect(x: CGPoint.zero.x, y: CGPoint.zero.y, width: kWidth, height: kHeight)
         
         iconView = UIImageView()
@@ -34,7 +34,7 @@ class MineHeaderView: XGGradientView {
         nameView.font = UIFont.boldSystemFont(ofSize: 16)
         addSubview(nameView)
         
-        setGradient(colors: [UIColor.kLightGray().cgColor,UIColor.kGreen().cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 1, y: 0))
+        setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
 
         
     }

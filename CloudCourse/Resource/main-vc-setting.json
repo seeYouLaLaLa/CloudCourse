@@ -5,9 +5,14 @@
         "icon":"ic_home_icon"
     },
     {
-         "vc":"CourseCateViewController",
-         "title":"课程分类",
+         "vc":"CategoryViewController",
+         "title":"分类",
          "icon":"ic_category_icon"
+    },
+    {
+         "vc":"MyCourseViewController",
+         "title":"课表",
+         "icon":"ic_schedule_icon"
     },
     {
         "vc":"MineViewController",

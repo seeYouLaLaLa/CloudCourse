@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XGGradientView: UIView {
+class XGGradientView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

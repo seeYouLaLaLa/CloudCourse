@@ -13,8 +13,9 @@ extension UIColor {
     open class func page() -> UIColor {
         return rgb(red: 245, green: 245, blue: 245)
     }
+    
     open class func main() -> UIColor {
-        return UIColor.orange
+        return kBlue()
     }
     
     open class func kGreen() -> UIColor {
@@ -40,6 +41,11 @@ extension UIColor {
     open class func kBlue() -> UIColor {
         return rgb(red: 30, green: 120, blue: 250)
     }
+    
+    open class func kLightBlue() -> UIColor {
+        return rgb(red: 60, green: 180,  blue: 250)
+    }
+    
     
     open class func kRed() -> UIColor {
         return rgb(red: 250, green: 60, blue: 30)

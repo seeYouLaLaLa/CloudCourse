@@ -7,7 +7,7 @@ target 'CloudCourse' do
   
   pod 'Alamofire', '~>4.7.2'
   pod 'FDFullscreenPopGesture', '~>1.1' 
-  pod 'MJRefresh', '~>3.1.15.3'
+  pod 'Kingfisher', '~> 4.8.0'
 
 end
 

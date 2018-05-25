@@ -9,13 +9,6 @@
 import UIKit
 import FDFullscreenPopGesture
 class XGViewController: UIViewController {
-    enum XGNavBarStyle {
-        
-        case defalut
-        
-        case blur
-        
-    }
     
     enum XGItemPosition {
         
@@ -46,20 +39,11 @@ class XGViewController: UIViewController {
     }()
     
     final lazy var navigationBar: XGGradientView = {
-        let view = XGGradientView()
-        view.frame = XGRect.navBarRect()
-        view.backgroundColor = UIColor.white
-        view.addSubview(navigationBlur)
+        let view = XGGradientView.init(frame: XGRect.navBarRect())
+        view.backgroundColor = .white
         return view
     }()
-    
-    final lazy var navigationBlur: UIVisualEffectView = {
-        let effectView = UIVisualEffectView.init(effect: UIBlurEffect.init(style: UIBlurEffectStyle.extraLight))
-        effectView.frame = XGRect.navBarRect()
-        effectView.backgroundColor = UIColor.white
-        effectView.isHidden = true
-        return effectView
-    }()
+
    
     func shouldShowBackItem() -> Bool {
         return true
@@ -124,17 +108,8 @@ extension XGViewController {
         navigationItem.titleView = titleView
     }
     
-    final func naviBarColor(color: UIColor) -> Void {
-        
-        naviBarColor(color: color, style: .defalut)
-        
+    final func naviBarColor(colors: [CGColor]) -> Void {
+        navigationBar.setGradient(colors: colors, startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
     }
-    
-    final func naviBarColor(color: UIColor, style: XGNavBarStyle) -> Void {
-        
-        navigationBlur.isHidden = style != .blur
-        
-        navigationBar.backgroundColor = color
-        
-    }
+
 }

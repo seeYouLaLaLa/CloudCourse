@@ -8,12 +8,19 @@
 
 import UIKit
 import Alamofire
+public typealias Success = ((_ jsonObject : Any) -> Void)
+public typealias Failure = ((_ error: NSError) -> Void)
 
 struct ItemInfo {
    static let sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
    static let maxWidth = UIScreen.main.bounds.width - sectionInset.left - sectionInset.right - 16
 }
-class Item : NSObject {
+
+class Item: Codable{
+    
+    var id: String?
+    
+    var url: String?
     
     var title: String?
     
@@ -35,5 +42,46 @@ class Item : NSObject {
             }
         }
     }    
-    
+    class func getItems(success: @escaping Success,failure: @escaping Failure) -> Void {
+        Alamofire.request("https://www.apiopen.top/meituApi?page=1").responseJSON { (respJson) in
+            respJson.result.ifSuccess {
+                let obj = respJson.result.value as? Dictionary<String, Any>
+                let arr = obj!["data"]
+                if let items = arr {
+                    success(items)
+                }
+            }
+            respJson.result.ifFailure {
+                
+            }
+//            let obj = try? JSONDecoder().decode(Item.self, from: respJson.result!)
+//            guard let item = obj else {
+//                return
+//            }
+//            success(item)
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

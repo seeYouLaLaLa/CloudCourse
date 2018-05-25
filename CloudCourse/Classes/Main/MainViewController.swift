@@ -93,8 +93,7 @@ class MainViewController: UITabBarController {
         super.viewDidLayoutSubviews()
         if tabBarIndicator == nil {
             tabBarIndicator = XGGradientView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
-            let lightBlue = UIColor.rgb(60, 180, 250)
-            tabBarIndicator?.setGradient(colors: [lightBlue.cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
+            tabBarIndicator?.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
             self.tabBar.insertSubview(tabBarIndicator!, at: 0)
         }
     }

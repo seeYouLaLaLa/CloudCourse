@@ -16,7 +16,11 @@ class HomeViewController: XGViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.tabBarItem.badgeValue = "2"
+        if #available(iOS 10.0, *) {
+            self.tabBarItem.badgeColor = .red
+        }
+        self.view.backgroundColor = .white
         showItem(at: .left, item: UIBarButtonItem.item(imageName: "ic_logo", tintColor: nil, target: nil, action: nil))
         
         let item0 = Item()
@@ -166,7 +170,7 @@ extension HomeViewController:UICollectionViewDataSource {
 
 extension HomeViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CourseCateViewController(), animated: true)
+        navigationController?.pushViewController(CategoryViewController(), animated: true)
     }
 }
 
