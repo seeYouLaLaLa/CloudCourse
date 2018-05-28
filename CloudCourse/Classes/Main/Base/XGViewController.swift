@@ -98,7 +98,7 @@ extension XGViewController {
     
     }
 
-    final func naviTitle(title:String, titleColor: UIColor) {
+    final func naviTitle(title: String, titleColor: UIColor) {
         
         titleView.isHidden = false
         titleView.setTitle(title, for: .normal)

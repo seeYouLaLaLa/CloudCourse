@@ -34,7 +34,7 @@ class MineHeaderView: XGGradientView {
         nameView.font = UIFont.boldSystemFont(ofSize: 16)
         addSubview(nameView)
         
-        setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
+        setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
 
         
     }

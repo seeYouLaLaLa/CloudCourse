@@ -9,13 +9,12 @@
 import UIKit
 import AudioToolbox
 class MainViewController: UITabBarController {
-    var tabBarbuttons: [Any]?
-    var tabBarIndicator: XGGradientView?
-    var tabBarColor = [UIColor.kBlue(),UIColor.kBlue(),UIColor.kBlue()]
+    var tabBarbuttons: [AnyObject]?
+    var tabBarIndicator: XGGradientView!
+    var tabBarColor = [UIColor.main(),UIColor.main(),UIColor.main()]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.shadowToTop()
-
+        tabBar.shadowToTop()
         UITabBar.appearance().backgroundColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.white
         UITabBar.appearance().shadowImage = UIImage()
@@ -48,7 +47,15 @@ class MainViewController: UITabBarController {
         let index = self.tabBar.items!.index(of: item)!
         playTabBarItemSound()
         if tabBarbuttons != nil {
-            CAAnimation.tabBarItemAnimation(at: index, tabBarIndicator: self.tabBarIndicator!, tabBar: tabBar, color: tabBarColor)
+            var colorIndex = index
+            UIView.animate(withDuration: 0.2, animations: {
+                self.tabBarIndicator.frame = self.tabBarbuttons![index].frame
+                if colorIndex > 2 {
+                    colorIndex = 0
+                }
+                self.tabBarIndicator.backgroundColor = self.tabBarColor[colorIndex]
+            })
+
             CAAnimation.tabBarClickAnimation(at: index, buttons: tabBarbuttons!)
         }
         
@@ -77,7 +84,8 @@ class MainViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if tabBarbuttons == nil && (self.tabBar.items?.count)! > 0  {
-            tabBarbuttons = self.tabBarButtons(at: 0, tabBar: self.tabBar)
+            tabBarbuttons = self.tabBarButtons(at: 0, tabBar: self.tabBar) as [AnyObject]
+            tabBarIndicator.frame = (tabBarbuttons?.first?.frame)!
         }
     }
     
@@ -93,8 +101,8 @@ class MainViewController: UITabBarController {
         super.viewDidLayoutSubviews()
         if tabBarIndicator == nil {
             tabBarIndicator = XGGradientView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
-            tabBarIndicator?.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
-            self.tabBar.insertSubview(tabBarIndicator!, at: 0)
+            tabBarIndicator.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
+            self.tabBar.insertSubview(tabBarIndicator, at: 0)
         }
     }
 }

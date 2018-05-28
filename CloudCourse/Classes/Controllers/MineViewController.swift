@@ -24,7 +24,7 @@ class MineViewController: XGTableViewController {
         showItem(at: .left, item: UIBarButtonItem.item(imageName: "ic_mine_news", tintColor:UIColor.white,  target: nil, action: nil))
         showItem(at: .right, item: UIBarButtonItem.item(imageName: "ic_mine_setting", tintColor:.white,  target: nil, action: nil))
         navigationItem.titleView = UIImageView.init(image: UIImage(named: "ic_mine_title"))
-        naviBarColor(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor])
+        naviBarColor(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor])
     }
     
     func setupView() -> Void {
@@ -46,7 +46,7 @@ class MineViewController: XGTableViewController {
     
     lazy var stretchView: XGGradientView = {
        let view = XGGradientView.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: XGRect.screenWidth(), height: 0.5)))
-        view.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.kBlue().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
+        view.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
         return view
     }()
     

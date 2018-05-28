@@ -18,6 +18,10 @@ class XGNavigationBar: UINavigationBar {
         
         setBackgroundImage(UIImage(), for: .default)
         
+        backIndicatorImage = UIImage(named: "ic_logo")
+        
+        backIndicatorTransitionMaskImage = UIImage(named: "ic_logo")
+        
         titleTextAttributes = [.foregroundColor : UIColor.kBlack(), .font : UIFont.systemFont(ofSize: 17)]
     }
     

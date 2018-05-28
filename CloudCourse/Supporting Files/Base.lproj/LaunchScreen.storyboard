@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,11 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Brj-GE-crn"/>
+                        <viewControllerLayoutGuide type="bottom" id="W7N-uL-eHF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -134,7 +137,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-L7-fbO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYa-L7-fbO">
                                 <rect key="frame" x="207" y="556" width="127" height="22"/>
                                 <attributedString key="attributedText">
                                     <fragment content="C">
@@ -210,14 +213,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lYa-L7-fbO" secondAttribute="bottom" constant="89" id="86E-nZ-o8l"/>
+                            <constraint firstAttribute="bottom" secondItem="lYa-L7-fbO" secondAttribute="bottom" constant="89" id="86E-nZ-o8l"/>
                             <constraint firstItem="qgt-PZ-fLS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-30" id="NpN-ZJ-xz5"/>
                             <constraint firstItem="RdJ-GQ-JfF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="50" id="Q0n-39-r5V"/>
                             <constraint firstItem="RdJ-GQ-JfF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="30" id="ewV-Xx-69Y"/>
                             <constraint firstItem="qgt-PZ-fLS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="iZ9-yg-pNk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lYa-L7-fbO" secondAttribute="trailing" constant="41" id="tkG-Ch-LME"/>
+                            <constraint firstAttribute="trailing" secondItem="lYa-L7-fbO" secondAttribute="trailing" constant="41" id="tkG-Ch-LME"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

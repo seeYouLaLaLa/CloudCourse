@@ -42,7 +42,7 @@ class CategoryViewController: XGViewController {
     }()
     
     @objc override func shouldShowBackItem() -> Bool {
-        return false
+        return true
     }
    
 }

@@ -9,21 +9,10 @@ import Kingfisher
 
 extension UIImageView {
     
-    func xg_setImage(with resource: Resource?) {
-        kf.setImage(with: resource,
+    func xg_setImage(with url: String) {
+        kf.setImage(with: URL(string: url),
                     placeholder: UIImage(named: "ic_image_placeholder"),
-                    options:[.transition(.fade(0.25))])
+                    options:[.transition(.fade(0.2))])
     }
-    
-    func xg_setImage(with resource: Resource?, progressBlock: DownloadProgressBlock? = nil,
-                     completionHandler: CompletionHandler? = nil) {
-        kf.setImage(with: resource,placeholder: UIImage(named: "ic_image_placeholder"),options:[.transition(.fade(0.25))], progressBlock: { (receivedSize, totalSize) in
-            if let progressBlock = progressBlock {
-                progressBlock(receivedSize, totalSize)
-            }
-        }) { (image, error, cacheType, imageURL) in
-            completionHandler?(image, error, cacheType, imageURL)
-        }
-    }
-    
+   
 }

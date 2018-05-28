@@ -24,7 +24,7 @@ class HomeViewCell: UICollectionViewCell {
         textButton?.contentEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
         textButton?.titleLabel?.numberOfLines = 0
         textButton?.layer.cornerRadius = 3
-        textButton?.backgroundColor = UIColor.kBlue()
+        textButton?.backgroundColor = UIColor.main()
         textButton?.isUserInteractionEnabled = false
         self.contentView.addSubview(textButton!)
     }

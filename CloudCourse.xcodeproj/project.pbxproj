@@ -49,6 +49,8 @@
 		B7CA6E0E20B7B5D800F147BC /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6DF820B7B5D800F147BC /* MJRefreshComponent.m */; };
 		B7CA6E1020B7C18900F147BC /* XGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6E0F20B7C18900F147BC /* XGNetwork.swift */; };
 		B7CA6E1220B7C86400F147BC /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6E1120B7C86400F147BC /* ExtensionUIImageView.swift */; };
+		B7CA6E1620B830D300F147BC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6E1520B830D300F147BC /* Cell.swift */; };
+		B7CA6E1A20B83AB100F147BC /* MyCourseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA6E1920B83AB100F147BC /* MyCourseViewCell.swift */; };
 		B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415220B0220500481D7F /* ExtensionUIView.swift */; };
 		B7CE415520B0285E00481D7F /* ExtensionCAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */; };
 		B7CE415920B0AC9500481D7F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE415820B0AC9500481D7F /* CategoryViewController.swift */; };
@@ -127,6 +129,8 @@
 		B7CA6DFA20B7B5D800F147BC /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		B7CA6E0F20B7C18900F147BC /* XGNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGNetwork.swift; sourceTree = "<group>"; };
 		B7CA6E1120B7C86400F147BC /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
+		B7CA6E1520B830D300F147BC /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		B7CA6E1920B83AB100F147BC /* MyCourseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewCell.swift; sourceTree = "<group>"; };
 		B7CE415220B0220500481D7F /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		B7CE415420B0285E00481D7F /* ExtensionCAAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCAAnimation.swift; sourceTree = "<group>"; };
 		B7CE415820B0AC9500481D7F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		B7B5390820AE7BE400F60527 /* ControllerCls */ = {
 			isa = PBXGroup;
 			children = (
+				B7CA6E1820B83A8200F147BC /* MyCourse */,
 				B7B5390920AE7BE400F60527 /* Home */,
 				B7CA6DB020B308A700F147BC /* Mine */,
 			);
@@ -270,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C5C6CA20AD23B000A40BEC /* Item.swift */,
+				B7CA6E1520B830D300F147BC /* Cell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +400,14 @@
 				B7CA6DFA20B7B5D800F147BC /* MJRefreshBackFooter.h */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B7CA6E1820B83A8200F147BC /* MyCourse */ = {
+			isa = PBXGroup;
+			children = (
+				B7CA6E1920B83AB100F147BC /* MyCourseViewCell.swift */,
+			);
+			path = MyCourse;
 			sourceTree = "<group>";
 		};
 		B7E0B46520AC2F9A000272C2 /* CloudCourse */ = {
@@ -583,10 +597,12 @@
 				B7C5C6CD20AD267100A40BEC /* ExtensionString.swift in Sources */,
 				B7CE415320B0220600481D7F /* ExtensionUIView.swift in Sources */,
 				B7C5C6CB20AD23B000A40BEC /* Item.swift in Sources */,
+				B7CA6E1620B830D300F147BC /* Cell.swift in Sources */,
 				B7E0B47820AC2F9A000272C2 /* HomeViewController.swift in Sources */,
 				B7CA6E1020B7C18900F147BC /* XGNetwork.swift in Sources */,
 				B7CA6E1220B7C86400F147BC /* ExtensionUIImageView.swift in Sources */,
 				B7CA6E0620B7B5D800F147BC /* MJRefreshAutoNormalFooter.m in Sources */,
+				B7CA6E1A20B83AB100F147BC /* MyCourseViewCell.swift in Sources */,
 				B7CA6DC520B53CFE00F147BC /* XGTableViewController.swift in Sources */,
 				B7CA6DFF20B7B5D800F147BC /* NSBundle+MJRefresh.m in Sources */,
 				B7CA6E0120B7B5D800F147BC /* MJRefreshBackGifFooter.m in Sources */,
@@ -686,7 +702,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -742,7 +758,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -759,7 +775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZCA99V8R2;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,7 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZCA99V8R2;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudCourse/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

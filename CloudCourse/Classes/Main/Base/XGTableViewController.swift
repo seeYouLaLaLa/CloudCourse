@@ -44,11 +44,10 @@ class XGTableViewController: XGViewController {
     @objc func loadMoreData() -> Void {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.tableView.mj_footer.endRefreshing()
-            
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad() -> Void {
         super.viewDidLoad()
         view.addSubview(tableView)
         if #available(iOS 11, *) {
@@ -60,6 +59,7 @@ class XGTableViewController: XGViewController {
     }
     
 }
+
 extension XGTableViewController {
     func endRefreshing() -> Void {
         tableView.mj_header.endRefreshing()

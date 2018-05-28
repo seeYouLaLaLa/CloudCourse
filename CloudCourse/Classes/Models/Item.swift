@@ -17,9 +17,7 @@ struct ItemInfo {
 }
 
 class Item: Codable{
-    
-    var id: String?
-    
+  
     var url: String?
     
     var title: String?
@@ -42,26 +40,9 @@ class Item: Codable{
             }
         }
     }    
-    class func getItems(success: @escaping Success,failure: @escaping Failure) -> Void {
-        Alamofire.request("https://www.apiopen.top/meituApi?page=1").responseJSON { (respJson) in
-            respJson.result.ifSuccess {
-                let obj = respJson.result.value as? Dictionary<String, Any>
-                let arr = obj!["data"]
-                if let items = arr {
-                    success(items)
-                }
-            }
-            respJson.result.ifFailure {
-                
-            }
-//            let obj = try? JSONDecoder().decode(Item.self, from: respJson.result!)
-//            guard let item = obj else {
-//                return
-//            }
-//            success(item)
-        }
-    }
+    
 }
+
 
 
 
