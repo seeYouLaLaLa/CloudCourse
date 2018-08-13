@@ -15,15 +15,17 @@ extension UIColor {
     }
     
     open class func main() -> UIColor {
-        return kRed()
+        return kBlue()
     }
     
     open class func kRed() -> UIColor {
         return rgb(255, 60, 30)
     }
+    
     open class func kLightRed() -> UIColor {
         return rgb(250, 100, 100)
     }
+    
     open class func kGreen() -> UIColor {
         return rgb(red: 50, green: 180, blue: 60)
     }
@@ -53,14 +55,8 @@ extension UIColor {
     }
     
     open class func kLightBlue() -> UIColor {
-        return kLightRed()
-//        return rgb(red: 60, green: 180,  blue: 250)
+        return rgb(red: 60, green: 180,  blue: 250)
     }
-    
-    
-//    open class func kRed() -> UIColor {
-//        return rgb(red: 250, green: 60, blue: 30)
-//    }
     
     open class func rgb(_ red:Int,_ green:Int,_ blue:Int) -> UIColor {
         return rgb(red: red, green: green, blue: blue)

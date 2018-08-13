@@ -69,8 +69,6 @@ extension CategoryViewController:UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }
 extension CategoryViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -10,6 +10,7 @@
 		B7110F7520B1AEAB00F3AD91 /* XGNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110F7420B1AEAB00F3AD91 /* XGNavigationBar.swift */; };
 		B7110F7820B1CAC200F3AD91 /* tap.caf in Resources */ = {isa = PBXBuildFile; fileRef = B7110F7720B1CAC200F3AD91 /* tap.caf */; };
 		B7110F7A20B1E21800F3AD91 /* ExtensionUIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */; };
+		B793985920D902180037A421 /* XGTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793985820D902180037A421 /* XGTabBar.swift */; };
 		B7B5390D20AE7BE400F60527 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */; };
 		B7B5390E20AE7BE400F60527 /* XGLeftAlignedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390C20AE7BE400F60527 /* XGLeftAlignedFlowLayout.swift */; };
 		B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5390F20AE7C6800F60527 /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		B7110F7420B1AEAB00F3AD91 /* XGNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGNavigationBar.swift; sourceTree = "<group>"; };
 		B7110F7720B1CAC200F3AD91 /* tap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.caf; sourceTree = "<group>"; };
 		B7110F7920B1E21800F3AD91 /* ExtensionUIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIDevice.swift; sourceTree = "<group>"; };
+		B793985820D902180037A421 /* XGTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XGTabBar.swift; sourceTree = "<group>"; };
 		B7B5390A20AE7BE400F60527 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		B7B5390C20AE7BE400F60527 /* XGLeftAlignedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XGLeftAlignedFlowLayout.swift; sourceTree = "<group>"; };
 		B7B5390F20AE7C6800F60527 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				B7B5390C20AE7BE400F60527 /* XGLeftAlignedFlowLayout.swift */,
 				B7110F7420B1AEAB00F3AD91 /* XGNavigationBar.swift */,
 				B7CA6DBD20B43D6600F147BC /* XGGradientView.swift */,
+				B793985820D902180037A421 /* XGTabBar.swift */,
 			);
 			path = CustomCls;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			files = (
 				B7B5391020AE7C6800F60527 /* AppDelegate.swift in Sources */,
 				B7C5C6C620AD1F9D00A40BEC /* ExtensionUIColor.swift in Sources */,
+				B793985920D902180037A421 /* XGTabBar.swift in Sources */,
 				B7CA6E0420B7B5D800F147BC /* MJRefreshAutoStateFooter.m in Sources */,
 				B7CA6DBE20B43D6600F147BC /* XGGradientView.swift in Sources */,
 				B7CA6E0820B7B5D800F147BC /* MJRefreshStateHeader.m in Sources */,

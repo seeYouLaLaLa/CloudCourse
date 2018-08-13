@@ -22,7 +22,7 @@ class MineViewController: XGTableViewController {
     
     func setupNav() -> Void {
         showItem(at: .left, item: UIBarButtonItem.item(imageName: "ic_mine_news", tintColor:UIColor.white,  target: nil, action: nil))
-        showItem(at: .right, item: UIBarButtonItem.item(imageName: "ic_mine_setting", tintColor:.white,  target: nil, action: nil))
+        showItem(at: .right, item: UIBarButtonItem.item(imageName: "ic_mine_setting", tintColor:.white, target: nil, action: nil))
         navigationItem.titleView = UIImageView.init(image: UIImage(named: "ic_mine_title"))
         naviBarColor(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor])
     }

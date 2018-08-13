@@ -10,16 +10,10 @@ import UIKit
 import AudioToolbox
 class MainViewController: UITabBarController {
     var tabBarbuttons: [AnyObject]?
-    var tabBarIndicator: XGGradientView!
-    var tabBarColor = [UIColor.main(),UIColor.main(),UIColor.main()]
+    let xgTabBar = XGTabBar()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.shadowToTop()
-        UITabBar.appearance().backgroundColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
-        
+        self.setValue(xgTabBar, forKey: "tabBar")
         let path = Bundle.main.path(forResource: "main-vc-setting", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         let data = try? Data(contentsOf: url)
@@ -47,15 +41,9 @@ class MainViewController: UITabBarController {
         let index = self.tabBar.items!.index(of: item)!
         playTabBarItemSound()
         if tabBarbuttons != nil {
-            var colorIndex = index
             UIView.animate(withDuration: 0.2, animations: {
-                self.tabBarIndicator.frame = self.tabBarbuttons![index].frame
-                if colorIndex > 2 {
-                    colorIndex = 0
-                }
-                self.tabBarIndicator.backgroundColor = self.tabBarColor[colorIndex]
+                self.xgTabBar.indicatorView.frame = self.tabBarbuttons![index].frame
             })
-
             CAAnimation.tabBarClickAnimation(at: index, buttons: tabBarbuttons!)
         }
         
@@ -70,7 +58,7 @@ class MainViewController: UITabBarController {
         
         self.addChildViewController(nav);
     }
-    
+
     func tabBarButtons(at index: Int,tabBar: UITabBar) ->[Any] {
         var buttons = [Any]()
         for tabBarSubView in tabBar.subviews {
@@ -85,7 +73,7 @@ class MainViewController: UITabBarController {
         super.viewDidAppear(animated)
         if tabBarbuttons == nil && (self.tabBar.items?.count)! > 0  {
             tabBarbuttons = self.tabBarButtons(at: 0, tabBar: self.tabBar) as [AnyObject]
-            tabBarIndicator.frame = (tabBarbuttons?.first?.frame)!
+            xgTabBar.indicatorView.frame = (tabBarbuttons?.first?.frame)!
         }
     }
     
@@ -95,14 +83,5 @@ class MainViewController: UITabBarController {
         let url = URL(fileURLWithPath: path!)
         AudioServicesCreateSystemSoundID(url as CFURL, &soundId)
         AudioServicesPlaySystemSound(soundId);
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if tabBarIndicator == nil {
-            tabBarIndicator = XGGradientView.init(frame: CGRect(x: 0, y: 0, width: tabBar.bounds.width / (CGFloat((tabBar.items?.count)!)), height: 49))
-            tabBarIndicator.setGradient(colors: [UIColor.kLightBlue().cgColor, UIColor.main().cgColor], startPoint: CGPoint.init(x: 0, y: 0), endPoint: CGPoint.init(x: 1, y: 0))
-            self.tabBar.insertSubview(tabBarIndicator, at: 0)
-        }
     }
 }
